@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Pets() {
   return (
-    <div>
+    <div className="container">
       <h1>Pets</h1>
       <p>
         Pet stuff oh yea Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque

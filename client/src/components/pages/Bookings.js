@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Bookings() {
   return (
-    <div>
+    <div className="container">
       <h1>Bookings</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
