@@ -43,13 +43,11 @@ export default function DaycareContainer() {
 
   return (
     <div className="daycare-container">
-      <h2>Doggy Daycare Header!!!!!!!!! WOOO!</h2>
-      {/* TO DO: <Header /> */}
       {/* We are passing the currentPage from state and the function to update it */}
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
-      {/* TO DO: <Footer /> */}
+
     </div>
   );
 };

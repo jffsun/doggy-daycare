@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function Cart() {
+export default function Services() {
   return (
-    <div>
-      <h1>Cart</h1>
+    <div className="container">
+      <h1>Services</h1>
       <p>
-        Cart cart cart Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
+        Services text here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
         velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
         ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
         non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
@@ -19,3 +19,4 @@ export default function Cart() {
     </div>
   );
 }
+
