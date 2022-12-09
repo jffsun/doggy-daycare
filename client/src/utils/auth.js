@@ -1,7 +1,7 @@
 // used to decode a token and get user's information
 import decode from 'jwt-decode';
 
-class AuthService {
+class AuthFunctions {
     // decodes user data from token
     getProfile() {
         return decode(this.getToken());
@@ -15,12 +15,20 @@ class AuthService {
     
     login(idToken) {
        // retrives token from local storage and reloads page to apply login status
-       
-    }
+       localStorage.setItem('id_token', idToken);
+       window.location.assign('/');
+    };
 
     getToken() {
         // retrives token from local storage
-        return localStorage.getItem(`id_token`);
-    }
+        return localStorage.getItem('id_token');
+    };
 
-}
+    logout() {
+        // removes token from local storage to log user out and reloads the application to apply changes
+        localStorage.removeItem('id_token');
+        window.location.assign('/');
+    };
+};
+
+export default new AuthFunctions();
