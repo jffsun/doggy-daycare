@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose');
+const { Schema } = require('mongoose');
 
 const petSchema = new Schema (
     {
@@ -7,13 +7,19 @@ const petSchema = new Schema (
             required: true,
             trim: true,
         },
-        age: {
-            type: Number, 
+        dob: {
+            type: String, 
         },
         gender: {
             type: String,
             required: true,
             trim: true,
+        },
+        breed: {
+            type: String,
+            required: true,
+            trim: true,
+            
         },
         medication: {
             type: String,
@@ -22,6 +28,4 @@ const petSchema = new Schema (
     }
 );
 
-const Pet = model('Pet', petSchema);
-
-module.exports = Pet;
+module.exports = petSchema

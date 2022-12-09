@@ -26,7 +26,13 @@ const userSchema = new Schema({
     minlength: 5
   },
   pets: [Pet.schema]
-});
+},
+{
+  toJSON: {
+    getters: true,
+  },
+  id: false,
+},);
 
 // set up pre-save middleware to create password
 userSchema.pre('save', async function(next) {
