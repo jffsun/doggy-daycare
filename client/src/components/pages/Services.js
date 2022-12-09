@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Services() {
   return (
-    <div>
+    <div className="container">
       <h1>Services</h1>
       <p>
         Services text here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
