@@ -16,3 +16,26 @@ const server = new ApolloServer({
     resolvers
 })
 
+// middleware parses put and post requests, allows access to req.body, recognizes req objects as strings/arrays
+app.use(express.urlencoded({extended: false}));
+// recognizes request objects as a json object
+app.use(express.json())
+
+const startApolloServer = async(typeDefs, resolvers) => {
+    await server.start();
+    server.applyMiddleware({app});
+
+    db.once('open', () => {
+        app.listen(PORT, () => {
+          console.log(`API server running on port ${PORT}!`);
+          console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+        })
+    })
+}
+
+startApolloServer(typeDefs, resolvers);
+
+  
+
+
+
