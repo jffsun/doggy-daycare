@@ -6,6 +6,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
     <span className="navbar-brand">PUP | DOGGY DAYCARE</span>
+    <div className="nav-right">
     <ul className="navbar-nav mr-auto">
     <li className="nav-item">
       <a
@@ -58,6 +59,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
       </a>
     </li>
   </ul>
+  </div>
   </nav>
   );
 };

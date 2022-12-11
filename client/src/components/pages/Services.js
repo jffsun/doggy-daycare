@@ -1,21 +1,67 @@
 import React from 'react';
+import bone from '../../assets/bone.png';
+import scissor from '../../assets/scissors.png';
+import board from '../../assets/zzz.png';
+import ball from '../../assets/ball.png';
 
 export default function Services() {
   return (
     <div className="container">
       <h1>Services</h1>
-      <p>
-        Services text here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
+      <br />
+        <div className="srvCard">
+          <div className="srvIcon">
+            <img src={bone} alt="bone"></img>
+          </div>
+          <div className="srvTitle">
+          DAYCARE
+          </div>
+          <div className="srvText">
+          Choose between Full Day and Half Day
+          </div>
+          <button type="button" class="btn btn-danger srvBtn">Book Service</button>
+        </div>
+
+        <div className="srvCard">
+          <div className="srvIcon">
+            <img src={board} alt="board"></img>
+          </div>
+          <div className="srvTitle">
+          BOARD
+          </div>
+          <div className="srvText">
+          Book an overnight stay
+          </div>
+          <button type="button" class="btn btn-danger srvBtn">Book Service</button>
+        </div>
+
+        <div className="srvCard">
+          <div className="srvIcon">
+            <img src={scissor} alt="groom"></img>
+          </div>
+          <div className="srvTitle">
+          GROOM
+          </div>
+          <div className="srvText">
+          Book a variety of grooming services
+          </div>
+          <button type="button" class="btn btn-danger srvBtn">Book Service</button>
+        </div>
+
+        <div className="srvCard">
+          <div className="srvIcon">
+            <img src={ball} alt="train"></img>
+          </div>
+          <div className="srvTitle">
+          TRAIN
+          </div>
+          <div className="srvText">
+          Book a training class
+          </div>
+          <button type="button" class="btn btn-danger srvBtn">Book Service</button>
+        </div>
+
+
     </div>
   );
 }
