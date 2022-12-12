@@ -18,6 +18,7 @@ const server = new ApolloServer({
 
 // middleware parses put and post requests, allows access to req.body, recognizes req objects as strings/arrays
 app.use(express.urlencoded({extended: false}));
+
 // recognizes request objects as a json object
 app.use(express.json())
 
