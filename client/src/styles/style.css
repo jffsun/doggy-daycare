@@ -30,16 +30,23 @@ ul {
     list-style: none;
 }
 
-a {
+li a {
     color: white;
     margin-left: 20px;
     float: right;
+    
 }
+
+a:hover {
+    color: darkgray;
+    text-decoration: none;
+}
+
 
 .logo {
     width: 300px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 body {
@@ -90,3 +97,19 @@ body {
     margin-top: 30px;
     font-size: 18px;
 }
+
+.foot {
+    bottom: 0;
+    text-align: center;
+    position:fixed;
+    width: 97%;
+    height: 40px;
+}
+
+.foot p{
+    padding-top: 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+

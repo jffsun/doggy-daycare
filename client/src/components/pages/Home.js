@@ -1,7 +1,10 @@
 import React from 'react';
-import logo from '../../assets/pup.png'
+import logo from '../../assets/pup.png';
+import { Link } from 'react-router-dom';
+import Login from '../pages/Login'
 
 export default function Home() {
+
   return (
     <div className="container">
       <div>
@@ -17,10 +20,9 @@ export default function Home() {
       </p>
 
     <br />
-    <br />
-
-      <button type="button" class="btn btn-danger">Login</button>
-
+      <a href="#login">
+      <button type="button" className="btn btn-danger loginBtn">Login</button>
+      </a>
     </div>
   );
 }
