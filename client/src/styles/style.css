@@ -50,12 +50,12 @@ a:hover {
 }
 
 body {
-    background-image: url('/Users/alanhuang/alanhuang/Projects/P03_DoggyDaycare/client/src/assets/paw.png');
+    background-image: url("../assets/paw.png");
     background-repeat: repeat;
     background-size: 200px;
     margin: 20px;
 }
-
+    
 .srvCard {
     width: 80%;
     height: 80px;
