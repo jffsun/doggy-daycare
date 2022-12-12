@@ -12,7 +12,6 @@ const resolvers = {
             // return user that matches id
             return User.find(params);
         },
-
     },
     Mutation: {
         // creates user, signs token, and returns both
