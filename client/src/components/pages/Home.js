@@ -1,21 +1,28 @@
 import React from 'react';
+import logo from '../../assets/pup.png';
+import { Link } from 'react-router-dom';
+import Login from '../pages/Login'
 
 export default function Home() {
+
   return (
     <div className="container">
-      <h1>Home</h1>
+      <div>
+        <center><img src={logo} className="logo" alt="pup_logo"></img></center>
+      </div>
+
+      <h2> About Us </h2>
+      <br/>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
+        Welcome to PUP Doggy Daycare! Established in 2022, our aim is to provide all around first class service for your furry family member. We have 
+        employees on staff 24/7 to make sure all of your dog's needs are met. We offer a variety of services, from daycare to grooming
+        at reasonable prices. We look forward to meeting you and your pets!
       </p>
+
+    <br />
+      <a href="#login">
+      <button type="button" className="btn btn-danger loginBtn">Login</button>
+      </a>
     </div>
   );
 }

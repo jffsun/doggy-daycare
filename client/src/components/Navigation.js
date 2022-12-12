@@ -4,15 +4,16 @@ import React from 'react';
 // Destructure props 'currentPage' and 'handlePageChange' passed into Navigation() 
 export default function Navigation({ currentPage, handlePageChange}) {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark"> 
     <span className="navbar-brand">PUP | DOGGY DAYCARE</span>
+    <div className="nav-right">
     <ul className="navbar-nav mr-auto">
     <li className="nav-item">
       <a
         href="#home"
         onClick={() => handlePageChange('Home')}
         // Check to see if the currentPage is `Home`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-        className={currentPage === 'Home' ? 'navigation-link active' : 'navigation-link'}
+        className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
       >
         HOME
       </a>
@@ -22,7 +23,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
         href="#pets"
         onClick={() => handlePageChange('Pets')}
         // Check to see if the currentPage is `projects`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
-        className={currentPage === 'Pets' ? 'navigation-link active' : 'navigation-link'}
+        className={currentPage === 'Pets' ? 'nav-link active' : 'nav-link'}
       >
         PETS
       </a>
@@ -32,7 +33,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
         href="#bookings"
         onClick={() => handlePageChange('Bookings')}
         // Check to see if the currentPage is `Bookings`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
-        className={currentPage === 'Bookings' ? 'navigation-link active' : 'navigation-link'}
+        className={currentPage === 'Bookings' ? 'nav-link active' : 'nav-link'}
       >
         BOOKINGS
       </a>
@@ -42,7 +43,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
         href="#services"
         onClick={() => handlePageChange('Services')}
         // Check to see if the currentPage is `Services`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
-        className={currentPage === 'Services' ? 'navigation-link active' : 'navigation-link'}
+        className={currentPage === 'Services' ? 'nav-link active' : 'nav-link'}
       >
         SERVICES
       </a>
@@ -52,12 +53,23 @@ export default function Navigation({ currentPage, handlePageChange}) {
         href="#cart"
         onClick={() => handlePageChange('Cart')}
         // Check to see if the currentPage is `Cart`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
-        className={currentPage === 'Cart' ? 'navigation-link active' : 'navigation-link'}
+        className={currentPage === 'Cart' ? 'nav-link active' : 'nav-link'}
       >
         CART
       </a>
     </li>
+    <li className="nav-item">
+      <a
+        href="#login"
+        onClick={() => handlePageChange('Login')}
+        // Check to see if the currentPage is `Cart`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
+        className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
+      >
+        LOG IN 
+      </a>
+    </li>
   </ul>
+  </div>
   </nav>
   );
 };

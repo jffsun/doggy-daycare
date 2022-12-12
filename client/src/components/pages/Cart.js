@@ -3,7 +3,7 @@ import React from 'react';
 export default function Services() {
   return (
     <div className="container">
-      <h1>Services</h1>
+      <h1>Cart</h1>
       <p>
         Services text here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
         velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
