@@ -47,7 +47,7 @@ const resolvers = {
         addPet: async (parent, {_id, newPet}) => {
             // finds user based on id then adds to newPet object to the pets array
             const addedPet = await User.findOneAndUpdate(
-                {_id},
+                {_id: _id},
                 { $push: { pets: newPet }},
                 { new: true, runValidators: true},
             );
@@ -58,7 +58,7 @@ const resolvers = {
         removePet: async (parent, {_id, petId}) => {
             // finds user based on id then removes the pet based on id from the pets array
             const removedPet = await User.findOneAndUpdate(
-                {_id},
+                {_id: _id},
                 { $pull: { pets: petId }},
                 { new: true, runValidators: true},
             );
