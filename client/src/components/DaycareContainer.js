@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 // Import components seen throughout application
 import Header from './Header'
 import Navigation from './Navigation';
@@ -11,6 +11,8 @@ import Pets from './pages/Pets';
 import Bookings from './pages/Bookings';
 import Services from './pages/Services';
 import Cart from './pages/Cart';
+
+// Forms
 
 // Handles all state changes which dictates which page the user is viewing
 export default function DaycareContainer() {
@@ -25,7 +27,7 @@ export default function DaycareContainer() {
     if (currentPage === 'Home') {
 
       // Return the JSX of the Home page component
-      return <Home />;
+      return <Home/>;
     }
     if (currentPage === 'Pets') {
       return <Pets />;
@@ -42,12 +44,15 @@ export default function DaycareContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
+    <>
     <div className="daycare-container">
-      {/* We are passing the currentPage from state and the function to update it */}
-      <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* Here we are calling the renderPage method which will return a component  */}
-      {renderPage()}
+        {/* We are passing the currentPage from state and the function to update it */}
+        <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
+        {/* Here we are calling the renderPage method which will return a component  */}
+        {renderPage()}
 
     </div>
+
+    </>
   );
 };
