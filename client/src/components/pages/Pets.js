@@ -11,7 +11,7 @@ export default function Pets() {
     <div className="container">
       <h1>Pets</h1>
       <br />
-      <button type="button" class="btn btn-danger">Add Pet</button>
+      <button type="button" class="btn btn-danger"><Link to='/form'>Add Pet</Link></button>
     </div>
 
       <Routes>
@@ -22,4 +22,3 @@ export default function Pets() {
   );
 }
 
-<Link to='/form'>Add Pet</Link>
