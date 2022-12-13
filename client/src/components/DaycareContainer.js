@@ -12,7 +12,7 @@ import Bookings from './pages/Bookings';
 import Services from './pages/Services';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
-
+import Calendar from './pages/Calendar';
 
 // Forms
 
@@ -42,6 +42,9 @@ export default function DaycareContainer() {
     }
     if (currentPage === 'Login') {
       return <Login />;
+    }
+    if (currentPage === 'Calendar') {
+      return <Calendar />;
     }
     return <Cart />;
   };
