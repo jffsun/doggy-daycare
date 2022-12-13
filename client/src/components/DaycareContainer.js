@@ -11,6 +11,8 @@ import Pets from './pages/Pets';
 import Bookings from './pages/Bookings';
 import Services from './pages/Services';
 import Cart from './pages/Cart';
+import Login from './pages/Login';
+
 
 // Forms
 
@@ -38,6 +40,9 @@ export default function DaycareContainer() {
     if (currentPage === 'Services') {
       return <Services />;
     }
+    if (currentPage === 'Login') {
+      return <Login />;
+    }
     return <Cart />;
   };
 
@@ -46,10 +51,11 @@ export default function DaycareContainer() {
   return (
     <>
     <div className="daycare-container">
-        {/* We are passing the currentPage from state and the function to update it */}
-        <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
-        {/* Here we are calling the renderPage method which will return a component  */}
-        {renderPage()}
+      {/* We are passing the currentPage from state and the function to update it */}
+      <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
+      {/* Here we are calling the renderPage method which will return a component  */}
+      {renderPage()}
+      <Footer />
 
     </div>
 

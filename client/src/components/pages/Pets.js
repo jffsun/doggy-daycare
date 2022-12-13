@@ -10,11 +10,8 @@ export default function Pets() {
     <>
     <div className="container">
       <h1>Pets</h1>
-        <button className='petForm'>
-          <Link to='/form'>Add Pet</Link>
-        </button>
-        <button>Show Pet</button>
-      
+      <br />
+      <button type="button" class="btn btn-danger">Add Pet</button>
     </div>
 
       <Routes>
@@ -24,3 +21,5 @@ export default function Pets() {
     </>
   );
 }
+
+<Link to='/form'>Add Pet</Link>
