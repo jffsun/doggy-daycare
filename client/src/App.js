@@ -4,7 +4,19 @@ import Modal from 'react-modal';
 
 // Bind modal to your appElement
 Modal.setAppElement('#root')
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
-const App = () => <DaycareContainer />;
+
+const App = () => {
+    return(
+        <>
+        <Router>
+            <DaycareContainer/>
+        </Router>
+        </>
+        
+    )
+
+}
 
 export default App;
