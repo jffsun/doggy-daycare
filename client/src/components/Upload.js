@@ -35,7 +35,6 @@ export default function Upload() {
             <form onSubmit={fileSubmit} className="form">
                 <input type="file" name="image" onChange={fileInputChange}
                 value={fileInputState} className="form-input"/>
-                <button className="btn" type="submit">Submit</button>
             </form>
             {previewSource && (
                 <img src={previewSource} alt="chosen"
