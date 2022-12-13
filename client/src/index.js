@@ -1,6 +1,9 @@
 // Still commonly used in production react codebases 
 import React from 'react';
 
+// Datepicker styling
+import "react-datetime/css/react-datetime.css";
+
 // Allows us to access DOM specific methods 
 import ReactDOM from 'react-dom';
 import App from './App';
