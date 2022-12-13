@@ -5,7 +5,6 @@ import AddEventModal from '../AddEventModal';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import PetForm from '../forms/PetForm';
-import PetRoutes from '../../routes/PetRoutes';
 import Card from '../Card';
 import pets from '../../pets.json';
 
