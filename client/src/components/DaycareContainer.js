@@ -29,21 +29,21 @@ export default function DaycareContainer() {
     if (currentPage === 'Home') {
 
       // Return the JSX of the Home page component
-      return <Home/>;
+      return <Link to='/'></Link>;
     }
     if (currentPage === 'Pets') {
-      return <Pets />;
+      return <Link to='/pets'></Link>;
     }
     if (currentPage === 'Bookings') {
-      return <Bookings />;
+      return <Link to='/bookings'></Link>;
     }
     if (currentPage === 'Services') {
-      return <Services />;
+      return <Link to='/services'></Link>;
     }
-    if (currentPage === 'Login') {
-      return <Login />;
+    if (currentPage === 'Cart') {
+      return <Link to='/cart'></Link>;
     }
-    return <Cart />;
+
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
