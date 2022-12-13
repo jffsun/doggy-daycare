@@ -12,9 +12,6 @@ import Bookings from './pages/Bookings';
 import Services from './pages/Services';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
-import Calendar from './pages/Calendar';
-
-// Forms
 
 // Handles all state changes which dictates which page the user is viewing
 export default function DaycareContainer() {
@@ -43,9 +40,6 @@ export default function DaycareContainer() {
     if (currentPage === 'Login') {
       return <Login />;
     }
-    if (currentPage === 'Calendar') {
-      return <Calendar />;
-    }
     return <Cart />;
   };
 
@@ -59,9 +53,7 @@ export default function DaycareContainer() {
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
       <Footer />
-
     </div>
-
     </>
   );
 };
