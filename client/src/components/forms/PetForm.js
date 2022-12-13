@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import Upload from "../Upload";
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import { ADD_PET } from "../../utils/mutations";
+import { useMutation } from '@apollo/client';
 
 
 export default function PetForm(){
@@ -15,17 +17,56 @@ export default function PetForm(){
         setAge(event.target.value)
     }
 
-    // const [gender, setGender] = useState('Male')
+    const [gender, setGender] = useState('')
+    const handleGender = (event) => {
+        setGender(event.target.value)
+    }
 
     const [medication, setMedication] = useState('')
     const handleMedication = (event) => {
         setMedication(event.target.value)
     }
 
+    const [addPet, {error, data}] = useMutation(ADD_PET);
+
+    // state for the fileinput
+    const [fileInputState, setFileInputState] = useState('');
+    // state for file converted to base64
+    const [previewSource, setPreviewSource] = useState();
+    // state for the file to be uploaded to the database
+    const [selectedFile, setSelectedFile] = useState('');
+
+    const fileInputChange = (e) => {
+        // targets the chosen file
+        const file = e.target.files[0];
+        convertFile(file);
+    };
+
+    const convertFile = (file) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = () => {
+            setPreviewSource(reader.result);
+        }
+    };
+
+    
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const { data } = await addPet({
+                variables: {name: name, age: age, gender: gender, medication: medication, image: previewSource}
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     return(
         <div>
             <h1>New Pet</h1>
-            <form>
+            <form onSubmit={handleFormSubmit}>
                 <label>
                     Name:
                     <input type='text' name="name" value={name} onChange={handleName} required/>
@@ -38,17 +79,7 @@ export default function PetForm(){
 
                 <label>
                     Gender:
-                    <select>
-                        <option value='Male'>
-                            Male
-                        </option>
-                        <option value='Female'>
-                            Female
-                        </option>
-                        <option value='Other'>
-                            Other
-                        </option>
-                    </select>
+                    <input type='text' name="gender" value={gender} onChange={handleGender} required/>
                 </label>
                 
                 <label>
@@ -56,7 +87,10 @@ export default function PetForm(){
                     <input type='text' name="medication" value={medication} onChange={handleMedication}/>
                 </label>
 
-                <Upload />
+                <label>
+                    <input type="file" name="image" onChange={fileInputChange}
+                    value={fileInputState} className="form-input"/>
+                </label>
 
                 <input type='submit' value='Submit'/>
             </form>
