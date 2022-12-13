@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Moon",
+        "image": "https://www.akc.org/wp-content/uploads/2017/11/Pembroke-Welsh-Corgi-standing-outdoors-in-the-fall.jpg",
+        "gender": "Male",
+        "medication": "None"
+    },
+    {
+        "id": 2,
+        "name": "Sun",
+        "image": "https://www.akc.org/wp-content/uploads/2017/11/Day1_Dec13_52.jpg",
+        "gender": "Female",
+        "medication": "None"
+    },
+    {
+        "id": 3,
+        "name": "Star",
+        "image": "https://www.akc.org/wp-content/uploads/2017/11/Pembroke-Welsh-Corgi-running-in-a-field-of-tall-grasses.jpg",
+        "gender": "Male",
+        "medication": "None"
+    }
+
+]
