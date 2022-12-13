@@ -15,7 +15,6 @@ export default function PetForm(){
         setAge(event.target.value)
     }
 
-    // const [gender, setGender] = useState('Male')
 
     const [medication, setMedication] = useState('')
     const handleMedication = (event) => {
