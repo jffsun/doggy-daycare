@@ -6,6 +6,7 @@ const typeDefs = gql`
         age: Int
         gender: String!
         medication: String!
+        image: String
     }
 
     type User {
@@ -22,6 +23,7 @@ const typeDefs = gql`
         age: Int
         gender: String!
         medication: String!
+        image: String
     }
 
     type Auth {

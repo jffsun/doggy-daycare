@@ -14,6 +14,7 @@ export const GET_ME = gql`
                 age
                 gender
                 medication
+                image
             }
         }
     }

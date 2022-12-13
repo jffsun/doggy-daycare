@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../assets/pup.png';
 import { Link } from 'react-router-dom';
 import Login from '../pages/Login'
+import Upload from '../Upload';
 
 export default function Home() {
 

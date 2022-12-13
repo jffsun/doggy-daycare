@@ -26,6 +26,9 @@ const petSchema = new Schema (
         medication: {
             type: String,
             trim: true,
+        },
+        image: {
+            type: String,
         }
     }
 );
