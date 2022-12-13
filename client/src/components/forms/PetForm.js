@@ -17,14 +17,14 @@ export default function PetForm(){
         setAge(event.target.value)
     }
 
-    const [gender, setGender] = useState('')
-    const handleGender = (event) => {
-        setGender(event.target.value)
-    }
-
     const [medication, setMedication] = useState('')
     const handleMedication = (event) => {
         setMedication(event.target.value)
+    }
+
+    const [gender, setGender] = useState('')
+    const handleGender = (event) => {
+        setGender(event.target.value)
     }
 
     const [addPet, {error, data}] = useMutation(ADD_PET);
