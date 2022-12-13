@@ -31,15 +31,35 @@ export const ADD_PET = gql`
         addPet(input: $input) {
             _id
             email
+            firstName
+            lastName
+            pets {
+                petId
+                name
+                age
+                gender
+                medication
+                image
+            }
         }
     }
 `;
 
 export const REMOVE_PET = gql`
-mutation removePet($petId: String!) {
-    removePet(petId: $petId) {
-        _id
-        email
+    mutation removePet($petId: String!) {
+        removePet(petId: $petId) {
+            _id
+            email
+            firstName
+            lastName
+            pets {
+                petId
+                name
+                age
+                gender
+                medication
+                image
+            }
     }
 }
 `;
