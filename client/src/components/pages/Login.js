@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { LOGIN_USER } from "../../utils/mutations";
+import { useMutation } from "@apollo/client";
 // import { validateEmail, validateText } from '../utils/helpers'
+import Auth from '../../utils/auth';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const [errorMessage, setErrorMessage] = useState("");
+  const [login, { error, data }] = useMutation(LOGIN_USER);
 
   const handleInputChange = (e) => {
     const { target } = e;
@@ -19,26 +23,24 @@ const Login = () => {
     }
   };
   
-  const handleFormSubmit = (e) => {
-
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    // if (!validateEmail(email)) {
-    //   setErrorMessage("Please enter a valid email.");
-    //   return;
-    // }
-    // if (!validatePassword(message)) {
-    //   setErrorMessage(`Please enter a password`);
-    //   return;
-    // }
+    try {
+      const { data } = await login({
+        variables: { email: email, password: password },
+      });
 
-    setEmail("");
-    setPassword("");
-    alert("You are now Logged In");
+      Auth.login(data.login.token);
+    } catch (err) {
+      console.log(err);
+    }
+
   };
+
   return (
     <div className="container">
-      <form className="form title" >
+      <form className="form title" onSubmit={handleFormSubmit}>
         <br />
         <h1>Log In</h1>
         <br />

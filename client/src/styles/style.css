@@ -113,3 +113,16 @@ body {
     text-align: center;
 }
 
+.card {
+    margin-bottom: 30px;
+    margin-right: 60px;
+    margin-left: 20px;
+    margin-top: 40px;
+    display: flex;
+    float: left;
+    border-radius: 20px;
+}
+
+.container2 {
+    display: inline-block;
+}
