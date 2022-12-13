@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Upload from "../Upload";
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
@@ -53,6 +54,8 @@ export default function PetForm(){
                     Medication:
                     <input type='text' name="medication" value={medication} onChange={handleMedication}/>
                 </label>
+
+                <Upload />
 
                 <input type='submit' value='Submit'/>
             </form>

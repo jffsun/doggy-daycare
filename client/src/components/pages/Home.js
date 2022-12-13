@@ -1,9 +1,6 @@
 import React from 'react';
 import logo from '../../assets/pup.png';
 import { Link } from 'react-router-dom';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Login from './Login';
-
 
 export default function Home() {
 
@@ -27,10 +24,6 @@ export default function Home() {
       <button type="button" className="btn btn-danger loginBtn"><Link to='/login'>Login</Link></button>
 
     </div>
-
-      <Routes>
-        <Route path='/login' element={<Login/>}/>
-      </Routes>
 
     </>
   );

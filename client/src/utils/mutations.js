@@ -29,10 +29,8 @@ export const LOGIN_USER = gql`
 export const ADD_PET = gql`
     mutation addPet($input: PetInput) {
         addPet(input: $input) {
-            user {
-                _id
-                email
-            }
+            _id
+            email
         }
     }
 `;
@@ -40,10 +38,8 @@ export const ADD_PET = gql`
 export const REMOVE_PET = gql`
 mutation removePet($petId: String!) {
     removePet(petId: $petId) {
-        user {
-            _id
-            email
-        }
+        _id
+        email
     }
 }
 `;
