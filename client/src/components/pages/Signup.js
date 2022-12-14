@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { ADD_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
+import Auth from '../../utils/auth';
 
 export default function Signup() {
   // set initial form state
@@ -33,7 +34,7 @@ export default function Signup() {
         variables: { ...userFormData },
       });
 
-    //   Auth.login(data.addUser.token);
+      Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);
       setShowAlert(true);
@@ -61,7 +62,7 @@ export default function Signup() {
           <Form.Control
             type='text'
             placeholder='Your first name'
-            name='first name'
+            name='firstName'
             onChange={handleInputChange}
             value={userFormData.firstName}
             required
@@ -74,7 +75,7 @@ export default function Signup() {
           <Form.Control
             type='text'
             placeholder='Your last name'
-            name='last name'
+            name='lastName'
             onChange={handleInputChange}
             value={userFormData.lastName}
             required
