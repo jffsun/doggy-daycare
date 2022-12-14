@@ -68,16 +68,6 @@ export default function Navigation({ currentPage, handlePageChange}) {
         CART
       </Link>
     </li>
-    <li className="nav-item">
-      <a
-        href="#login"
-        onClick={() => handlePageChange('Login')}
-        // Check to see if the currentPage is `Cart`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
-        className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
-      >
-        LOG IN 
-      </a>
-    </li>
   </ul>
   </div>
   </nav>

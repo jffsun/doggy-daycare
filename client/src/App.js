@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { setContext } from '@apollo/client/link/context';
 import Login from "./components/pages/Login";
+import Signup from "./components/pages/Signup";
 import PetForm from "./components/forms/PetForm";
 import Pets from "./components/pages/Pets";
 // import { FormRoutes } from "./routes/PetRoutes";
@@ -48,10 +49,8 @@ const App = () => {
             <DaycareContainer/>
             <Routes>
                 <Route path='/login' element={<Login/>}/>
-            </Routes>
-            <Routes>
-                {/* <Route path="/pets" element={<Pets/>}/> */}
                 <Route path="/pets/form" element={<PetForm/>}/>
+                <Route path='/signup' element={<Signup/>}/>
             </Routes>
 
         </Router>
