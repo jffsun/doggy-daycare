@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Boarding",
+    "price": 74
+  },
+  {
+    "name": "Bath",
+    "price": 34
+  },
+  {
+    "name": "Daycare",
+    "price": 48
+  }
+]
