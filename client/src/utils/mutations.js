@@ -36,8 +36,8 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_PET = gql`
-    mutation addPet($input: PetInput) {
-        addPet(input: $input) {
+    mutation addPet($_id: ID!, $input: PetInput) {
+        addPet(_id: $_id, input: $input) {
             _id
             email
             firstName
