@@ -37,6 +37,10 @@ li a {
     
 }
 
+a {
+    color: white;
+}
+
 a:hover {
     color: darkgray;
     text-decoration: none;
@@ -79,8 +83,8 @@ body {
 }
 
 .srvIcon img {
-    width: 60px;
-    padding-top: 10px;
+    width: 50px;
+    padding-top: 15px;
 }
 
 .srvTitle {
