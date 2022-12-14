@@ -26,7 +26,7 @@ const authLink = setContext((_, { headers }) => {
         authorization: token ? `Bearer ${token}` : ''
       }
     }
-  })
+})
   
   // variable for graphql endpoint
   const httpLink = createHttpLink({
@@ -41,12 +41,11 @@ const authLink = setContext((_, { headers }) => {
   });
 
 
-
 const App = () => {
     const [loggedIn, setLoggedIn] = useState(false);
     
     return(
-        <ApolloProvider client={client}>
+      <ApolloProvider client={client}>
         <Router>
             <DaycareContainer loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             <Routes>
@@ -54,9 +53,8 @@ const App = () => {
                 <Route path="/pets/form" element={<PetForm/>}/>
                 <Route path='/signup' element={<Signup/>}/>
             </Routes>
-
         </Router>
-        </ApolloProvider>
+      </ApolloProvider>
     )
 }
 

@@ -1,7 +1,7 @@
 // used to decode a token and get user's information
 import decode from 'jwt-decode';
 
-class AuthFunctions {
+class Auth {
     // decodes user data from token
     getProfile() {
         return decode(this.getToken());
@@ -31,4 +31,4 @@ class AuthFunctions {
     };
 };
 
-export default new AuthFunctions();
+export default new Auth();

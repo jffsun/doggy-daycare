@@ -21,9 +21,9 @@ export default function Home({ loggedIn, setLoggedIn }) {
 
     <br />
       {loggedIn ? (
-      <button type="button" onClick={() => setLoggedIn(!loggedIn)} className="btn btn-danger loginBtn"><Link to='/login'>Log In</Link></button>
-      ) : (
       <button type="button" onClick={() => setLoggedIn(!loggedIn)} className="btn btn-danger loginBtn">Log Out</button>
+      ) : (
+      <button type="button" onClick={() => setLoggedIn(!loggedIn)} className="btn btn-danger loginBtn"><Link to='/login'>Log In</Link></button>
       )}
     </div>
 

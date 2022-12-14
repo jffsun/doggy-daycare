@@ -135,3 +135,15 @@ body {
     color: black;
     font-weight: bold;
 }
+
+.input {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.fileUpload {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -4,7 +4,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
+
 import Bookings from './pages/Bookings';
+
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Pets from './pages/Pets';
@@ -68,6 +70,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
         CART
       </Link>
     </li>
+
   </ul>
   </div>
   </nav>
@@ -77,6 +80,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
       <Route path='/bookings' element={<Bookings/>} />
       <Route path='/services' element={<Services/>} />
       <Route path='/cart' element={<Cart/>} />
+
     </Routes>
 
   </>

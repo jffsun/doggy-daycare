@@ -13,7 +13,7 @@ const app = express();
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
 })
 
 // middleware parses put and post requests, allows access to req.body, recognizes req objects as strings/arrays
