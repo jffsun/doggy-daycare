@@ -63,6 +63,7 @@ const Login = () => {
         <input
           data-testid="text-box"
           value={password}
+          className="input"
           id="password"
           placeholder="Password"
           type="password"
@@ -78,7 +79,7 @@ const Login = () => {
           data-testid="submitButton"
           type="submit"
           className="Submit btn btn-danger"
-          value="Submit"
+          value="Login"
           onClick={handleFormSubmit}
         ></input>
       </form>

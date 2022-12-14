@@ -64,36 +64,68 @@ export default function PetForm(){
     }
 
     return(
-        <div>
+        <div className="container">
             <h1>New Pet</h1>
+            <br />
             <form onSubmit={handleFormSubmit}>
+                <div className="fileUpload">
                 <label>
-                    Name:
-                    <input type='text' name="name" value={name} onChange={handleName} required/>
+                    Add Photo
+                    <input type="file" 
+                    name="image" 
+                    onChange={fileInputChange}
+                    value={fileInputState} 
+                    className="form-input"/>
                 </label>
+                </div>
+            <br />
+            <br />
+                <input 
+                    type='text' 
+                    className="input" 
+                    name="name" 
+                    value={name} 
+                    placeholder="Pet Name"
+                    onChange={handleName} 
+                    required>
+                </input>
+            <br />
+                    <input type='number' 
+                    className="input" 
+                    name="age" 
+                    value={age} 
+                    placeholder="Age"
+                    onChange={handleAge} 
+                    required>
+                </input>
+            <br />
+                    <input type='text' 
+                    className="input" 
+                    name="gender" 
+                    value={gender} 
+                    placeholder="Gender"
+                    onChange={handleGender} 
+                    required>
+                </input>
+            <br />   
+                    <input 
+                    type='text-box' 
+                    className="input" 
+                    name="medication" 
+                    value={medication} 
+                    placeholder="Medication"
+                    onChange={handleMedication}>
+                </input>
+            <br />
+            <br />
 
-                <label>
-                    Age:
-                    <input type='number' name="age" value={age} onChange={handleAge} required/>
-                </label>
-
-                <label>
-                    Gender:
-                    <input type='text' name="gender" value={gender} onChange={handleGender} required/>
-                </label>
-                
-                <label>
-                    Medication:
-                    <input type='text' name="medication" value={medication} onChange={handleMedication}/>
-                </label>
-
-                <label>
-                    Add a Photo
-                    <input type="file" name="image" onChange={fileInputChange}
-                    value={fileInputState} className="form-input"/>
-                </label>
-
-                <input type='submit' value='Submit'/>
+                <input
+                    data-testid="submitButton"
+                    type="submit"
+                    className="Submit btn btn-danger"
+                    value="Submit"
+                    // onClick={handleFormSubmit}
+                ></input>
             </form>
         </div>
     )
