@@ -6,19 +6,14 @@ const petSchema = new Schema ({
             required: true,
             trim: true,
         },
-        dob: {
-            type: String, 
+        age: {
+            type: String,
+            required: true, 
         },
         gender: {
             type: String,
             required: true,
             trim: true,
-        },
-        breed: {
-            type: String,
-            required: true,
-            trim: true,
-            
         },
         medication: {
             type: String,
