@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import DaycareContainer from "./components/DaycareContainer";
 import Modal from 'react-modal';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { setContext } from '@apollo/client/link/context';
 import Login from "./components/pages/Login";
+import Signup from "./components/pages/Signup";
 import PetForm from "./components/forms/PetForm";
 import Pets from "./components/pages/Pets";
 // import { FormRoutes } from "./routes/PetRoutes";
@@ -42,13 +43,16 @@ const authLink = setContext((_, { headers }) => {
 
 
 const App = () => {
+    const [loggedIn, setLoggedIn] = useState(false);
+    
     return(
         <ApolloProvider client={client}>
         <Router>
-            <DaycareContainer/>
+            <DaycareContainer loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             <Routes>
                 <Route path='/login' element={<Login/>}/>
                 <Route path="/pets/form" element={<PetForm/>}/>
+                <Route path='/signup' element={<Signup/>}/>
             </Routes>
 
         </Router>

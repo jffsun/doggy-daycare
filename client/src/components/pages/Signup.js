@@ -48,7 +48,9 @@ export default function Signup() {
   };
 
   return (
-    <>
+    <div className="container">
+      <h1>Sign Up</h1>
+      <br />
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
@@ -61,7 +63,7 @@ export default function Signup() {
           <Form.Control
             type='text'
             placeholder='Your first name'
-            name='first name'
+            name='firstName'
             onChange={handleInputChange}
             value={userFormData.firstName}
             required
@@ -74,7 +76,7 @@ export default function Signup() {
           <Form.Control
             type='text'
             placeholder='Your last name'
-            name='last name'
+            name='lastName'
             onChange={handleInputChange}
             value={userFormData.lastName}
             required
@@ -114,6 +116,6 @@ export default function Signup() {
           Submit
         </Button>
       </Form>
-    </>
+    </div>
   );
 };
