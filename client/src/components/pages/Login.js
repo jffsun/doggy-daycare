@@ -54,6 +54,7 @@ const Login = () => {
           type="email"
           placeholder="Email"
           onChange={handleInputChange}
+          required
         ></input>
         <p>
           {errorMessage && (
@@ -67,6 +68,7 @@ const Login = () => {
           placeholder="Password"
           type="password"
           onChange={handleInputChange}
+          required
         ></input>
         <p>
           {errorMessage && (
