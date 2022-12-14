@@ -130,3 +130,8 @@ body {
 .container2 {
     display: inline-block;
 }
+
+.a2 {
+    color: black;
+    font-weight: bold;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../assets/pup.png';
 import { Link } from 'react-router-dom';
 
-export default function Home() {
+export default function Home({ loggedIn, setLoggedIn }) {
 
   return (
     <>
@@ -20,9 +20,11 @@ export default function Home() {
       </p>
 
     <br />
-
-      <button type="button" className="btn btn-danger loginBtn"><Link to='/login'>Login</Link></button>
-
+      {loggedIn ? (
+      <button type="button" onClick={() => setLoggedIn(!loggedIn)} className="btn btn-danger loginBtn"><Link to='/login'>Log In</Link></button>
+      ) : (
+      <button type="button" onClick={() => setLoggedIn(!loggedIn)} className="btn btn-danger loginBtn">Log Out</button>
+      )}
     </div>
 
     </>

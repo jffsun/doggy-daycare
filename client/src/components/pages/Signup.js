@@ -49,7 +49,9 @@ export default function Signup() {
   };
 
   return (
-    <>
+    <div className="container">
+      <h1>Sign Up</h1>
+      <br />
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
@@ -115,6 +117,6 @@ export default function Signup() {
           Submit
         </Button>
       </Form>
-    </>
+    </div>
   );
 };

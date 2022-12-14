@@ -88,6 +88,7 @@ export default function PetForm(){
                 </label>
 
                 <label>
+                    Add a Photo
                     <input type="file" name="image" onChange={fileInputChange}
                     value={fileInputState} className="form-input"/>
                 </label>

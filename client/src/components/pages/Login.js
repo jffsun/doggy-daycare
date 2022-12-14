@@ -3,6 +3,7 @@ import { LOGIN_USER } from "../../utils/mutations";
 import { useMutation } from "@apollo/client";
 // import { validateEmail, validateText } from '../utils/helpers'
 import Auth from '../../utils/auth';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -81,6 +82,8 @@ const Login = () => {
           onClick={handleFormSubmit}
         ></input>
       </form>
+      <br />
+      <p>Don't Have An Account? <Link to='/signup'><span className='a2'>Register</span></Link></p>
     </div>
   );
 
