@@ -78,16 +78,6 @@ export default function Navigation({ currentPage, handlePageChange}) {
         LOG IN 
       </a>
     </li>
-    <li className="nav-item">
-      <a
-        href="#calendar"
-        onClick={() => handlePageChange('Calendar')}
-        // Check to see if the currentPage is `Cart`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
-        className={currentPage === 'Calendar' ? 'nav-link active' : 'nav-link'}
-      >
-        CALENDAR
-      </a>
-    </li>
   </ul>
   </div>
   </nav>

@@ -16,7 +16,6 @@ const eventSchema = new Schema({
     type: Date,
     required: true,
   },
-  pet: [Pet.schema] 
 },
 );
 
