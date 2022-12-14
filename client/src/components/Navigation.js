@@ -3,9 +3,10 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Calendar from './Calendar';
 
 import Bookings from './pages/Bookings';
-import Calendar from './pages/Calendar';
+
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Pets from './pages/Pets';
@@ -71,7 +72,7 @@ export default function Navigation({ currentPage, handlePageChange}) {
     </li>
     <li className="nav-item">
       <Link
-        to='calendar'
+        to='/calendar'
         onClick={() => handlePageChange('Calendar')}
         // Check to see if the currentPage is `Cart`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
         className={currentPage === 'Calendar' ? 'nav-link active' : 'nav-link'}
