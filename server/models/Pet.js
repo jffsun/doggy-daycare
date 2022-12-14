@@ -1,9 +1,6 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const { Schema } = mongoose;
-
-const petSchema = new Schema (
-    {
+const petSchema = new Schema ({
         name: {
             type: String,
             required: true,
@@ -29,10 +26,16 @@ const petSchema = new Schema (
         },
         image: {
             type: String,
-        }
-    }
+        },
+    },
+    {
+        toJSON: {
+            getters: true,
+          },
+          id: false,
+    },
 );
 
-const Pet = mongoose.model('Pet', petSchema);
+const Pet = model('Pet', petSchema);
 
 module.exports = Pet;

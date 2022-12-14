@@ -1,6 +1,7 @@
 [
   {
   "name": "Raven",
+  "owner": "Misty Acosta",
   "dob": "05/10/2014",
   "gender": "F",
   "breed": "Toy Fox Terrier",
@@ -9,18 +10,21 @@
   },
   {
     "name": "AXL",
+    "owner": "Kelly Hurst",
     "dob": "12/08/2011",
     "gender": "M",
     "breed": "Maltipoo"
   },
   {
     "name": "Moon",
+    "owner": "Kelly Hurst",
     "dob": "05/16/2020",
     "gender": "M",
     "breed": "Corgi Australian Sheperd"
   },
   {
     "name": "Mochi",
+    "owner": "Ethan Johnson",
     "dob": "08/26/2010",
     "gender": "F",
     "medication": "Gabapentin",
