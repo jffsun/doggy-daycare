@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = require('mongoose');
 const Pet = require('./Pet');
 
 const serviceSchema = new Schema({
@@ -8,22 +7,24 @@ const serviceSchema = new Schema({
     required: true,
     trim: true
   },
-  start: {
+  startDate: {
     type: Date,
     required: true,
   },
-  end: {
+  endDate: {
     type: Date,
     required: true,
+  },
+  startTime: {
+    type: String,
   },
   price: {
     type: Number,
     required: true,
-    trim: true
   },
 },
 );
 
-const Service = mongoose.model('Service', serviceSchema);
+const Service = model('Service', serviceSchema);
 
 module.exports = Service;
