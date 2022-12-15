@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Service = require('./Service');
 
 const petSchema = new Schema ({
         name: {
@@ -22,6 +23,7 @@ const petSchema = new Schema ({
         image: {
             type: String,
         },
+        services: [Service.schema]
     },
     {
         toJSON: {

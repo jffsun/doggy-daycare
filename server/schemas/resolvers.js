@@ -58,13 +58,35 @@ const resolvers = {
             // finds user based on id then removes the pet based on id from the pets array
             const removedPet = await User.findOneAndUpdate(
                 {_id: _id},
-                { $pull: { pets: petId }},
+                { $pull: { pets: { petId: petId } }},
                 { new: true, runValidators: true},
             );
 
             // returns the user with the updated pets
             return removedPet;
-        }
+        },
+        addService: async (parent, {petId, input}) => {
+            // finds pet based on the petId then adds the input object to the services array
+            const addedService = await Pet.findOneAndUpdate(
+                { petId: petId },
+                { $push: { services: input }},
+                { new: true, runValidators: true},
+            );
+
+            // returns pet with new service added to services array
+            return addedService;
+        },
+        removeService: async (parent, {petId, serviceId}) => {
+            // finds pet based on id then removes service based on serviceId
+            const removedService = await Pet.findOneAndUpdate(
+                { petId: petId },
+                { $pull: { services: { serviceId: serviceId } }},
+                { new: true, runValidators: true},
+            );
+
+            // returns pet with service removed from the services aray
+            return removedService;
+        },
     }
 };
 
