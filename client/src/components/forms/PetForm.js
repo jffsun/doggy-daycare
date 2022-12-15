@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import { ADD_PET } from "../../utils/mutations";
 import { useMutation } from '@apollo/client';
+import Auth from "../../utils/auth";
 
 
 export default function PetForm(){
@@ -50,14 +51,29 @@ export default function PetForm(){
         }
     };
 
-    
+    const newPet = {
+        name: name,
+        age: age,
+        medication: medication,
+        gender: gender,
+        image: previewSource
+    };
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
+        console.log(newPet);
+
+        const authData = Auth.getProfile();
+
+        const _id = authData.data._id;
+
         try {
             const { data } = await addPet({
-                variables: {name: name, age: age, gender: gender, medication: medication, image: previewSource}
+                variables: { _id, input: newPet }
             });
+
+            console.log({data});
         } catch (err) {
             console.log(err);
         }
@@ -67,7 +83,7 @@ export default function PetForm(){
         <div className="container">
             <h1>New Pet</h1>
             <br />
-            <form onSubmit={handleFormSubmit}>
+            <form>
                 <div className="fileUpload">
                 <label>
                     Add Photo
@@ -124,7 +140,7 @@ export default function PetForm(){
                     type="submit"
                     className="Submit btn btn-danger"
                     value="Submit"
-                    // onClick={handleFormSubmit}
+                    onClick={handleFormSubmit}
                 ></input>
             </form>
         </div>
