@@ -6,7 +6,7 @@ import AddEventModal from '../AddEventModal';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import PetForm from '../forms/PetForm';
 import Card from '../Card';
-import pets from '../../pets.json';
+import pets from '../../../../server/seeders/petSeeds.json';
 
 export default function Pets() {
   const [modalOpen, setModalOpen] = useState(false);
