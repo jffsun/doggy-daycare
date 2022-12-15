@@ -59,10 +59,10 @@ export default function PetForm(){
         image: previewSource
     };
 
-    console.log(newPet);
-
     const handleFormSubmit = async (e) => {
         e.preventDefault();
+
+        console.log(newPet);
 
         const authData = Auth.getProfile();
 
