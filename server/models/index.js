@@ -3,4 +3,4 @@ const Service = require('./Service')
 const Pet = require('./Pet');
 
 
-module.exports = { User, Service }
+module.exports = { User, Service, Pet }

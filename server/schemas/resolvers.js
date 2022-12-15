@@ -43,11 +43,11 @@ const resolvers = {
 
             return { token, user };
         },
-        addPet: async (parent, {_id, newPet}) => {
-            // finds user based on id then adds to newPet object to the pets array
+        addPet: async (parent, {_id, input}) => {
+            // finds user based on id then adds to input object to the pets array
             const addedPet = await User.findOneAndUpdate(
                 {_id: _id},
-                { $push: { pets: newPet }},
+                { $push: { pets: input }},
                 { new: true, runValidators: true},
             );
             
