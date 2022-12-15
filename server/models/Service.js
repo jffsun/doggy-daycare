@@ -1,10 +1,20 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+const Pet = require('./Pet');
 
 const serviceSchema = new Schema({
-  name: {
+  title: {
     type: String,
     required: true,
     trim: true
+  },
+  start: {
+    type: Date,
+    required: true,
+  },
+  end: {
+    type: Date,
+    required: true,
   },
   price: {
     type: Number,
@@ -14,6 +24,6 @@ const serviceSchema = new Schema({
 },
 );
 
-const Service = model('Service', serviceSchema);
+const Service = mongoose.model('Service', serviceSchema);
 
 module.exports = Service;
