@@ -37,10 +37,8 @@ const typeDefs = gql`
     type Service {
         _id: ID
         title: String!
-        startDate: String!
-        endDate: String!
-        startTime: String
-        price: Float!
+        date: String
+        price: Float
     }
 
     type Auth {
@@ -50,6 +48,7 @@ const typeDefs = gql`
 
     type Query {
         me: User
+        services: Service
     }
 
     type Mutation {

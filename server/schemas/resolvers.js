@@ -12,6 +12,10 @@ const resolvers = {
             // return user that matches id
             return User.findOne(params);
         },
+        // query to find all services
+        services: async () => {
+            return Service.find({});
+        }
     },
     Mutation: {
         // creates user, signs token, and returns both
