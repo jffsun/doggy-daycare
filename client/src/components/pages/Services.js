@@ -26,7 +26,7 @@ export default function Services() {
             Choose between Full Day and Half Day
             </div>
             {/* onClick: opens Modal */}
-            <button onClick={() => setModalOpen(true)} type="button" class="btn btn-danger srvBtn">Book Service</button>
+            <button onClick={() => setModalOpen(true)} type="button" className="btn btn-danger srvBtn">Book Service</button>
           </div>
 
           {/* Render 'AddServiceModal' component */}
@@ -44,7 +44,7 @@ export default function Services() {
           <div className="srvText">
           Book an overnight stay
           </div>
-          <button type="button" class="btn btn-danger srvBtn">Book Service</button>
+          <button type="button" className="btn btn-danger srvBtn">Book Service</button>
         </div>
 
         <div className="srvCard">
