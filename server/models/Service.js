@@ -7,10 +7,14 @@ const serviceSchema = new Schema({
   },
   date: {
     type: String,
+    trim: true
   },
-  price: {
-    type: Number,
-  },
+},
+{
+  toJSON: {
+      getters: true,
+    },
+    id: false,
 },
 );
 
