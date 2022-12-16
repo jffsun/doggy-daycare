@@ -8,8 +8,6 @@ import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import PetForm from "./components/forms/PetForm";
 
-// import { FormRoutes } from "./routes/PetRoutes";
-
 // Bind modal to your appElement
 Modal.setAppElement('#root')
 
