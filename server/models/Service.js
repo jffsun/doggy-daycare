@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const Pet = require('./Pet');
 
 const serviceSchema = new Schema({
   title: {
@@ -7,15 +6,7 @@ const serviceSchema = new Schema({
     required: true,
     trim: true
   },
-  startDate: {
-    type: Date,
-    required: true,
-  },
-  endDate: {
-    type: Date,
-    required: true,
-  },
-  startTime: {
+  date: {
     type: String,
   },
   price: {
