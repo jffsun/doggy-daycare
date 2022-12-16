@@ -11,6 +11,7 @@ import App from './App';
 // Import bootstrap for extra styling
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Import Style Sheet
 import styles from "./styles/style.css"
 
 // ReactDOM.render() method to renders our app component to the DOM

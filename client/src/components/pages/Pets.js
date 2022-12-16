@@ -1,10 +1,5 @@
 import React, {useState, useRef} from 'react';
 import { Link } from 'react-router-dom';
-import Upload from '../Upload';
-import AddEventModal from '../AddEventModal';
-
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import PetForm from '../forms/PetForm';
 import Card from '../Card';
 import fakePets from '../../pets.json'
 import { GET_ME } from "../../utils/queries";
@@ -13,6 +8,8 @@ import { useQuery } from '@apollo/client';
 
 export default function Pets() {
   const [modalOpen, setModalOpen] = useState(false);
+
+  //import Pet Data
   const { loading, data } = useQuery(GET_ME);
   
   console.log(data);
