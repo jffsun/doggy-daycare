@@ -5,7 +5,6 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 
 // Import our various pages
-
 import Cart from './pages/Cart';
 
 

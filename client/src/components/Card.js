@@ -1,6 +1,5 @@
 import React from 'react';
-import { REMOVE_PET } from '../utils/mutations'
-import { useMutation } from '@apollo/client';
+
 
 export default function Card(props) {
   const cardStyle = {
