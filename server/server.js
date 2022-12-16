@@ -22,9 +22,6 @@ app.use(express.urlencoded({extended: false}));
 // recognizes request objects as a json object
 app.use(express.json())
 
-// Use calendar routes
-app.use("/api/calendar", require("./Controllers/CalendarController"));
-
 const startApolloServer = async(typeDefs, resolvers) => {
     await server.start();
     server.applyMiddleware({app});
