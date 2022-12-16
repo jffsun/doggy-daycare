@@ -43,7 +43,7 @@ export const ADD_PET = gql`
             firstName
             lastName
             pets {
-                petId
+                _id
                 name
                 age
                 gender
@@ -62,7 +62,7 @@ export const REMOVE_PET = gql`
             firstName
             lastName
             pets {
-                petId
+                _id
                 name
                 age
                 gender
@@ -83,7 +83,7 @@ export const ADD_SERVICE = gql`
             medication
             image
             services {
-                serviceId
+                _id
                 title
                 startDate
                 endDate
@@ -104,7 +104,7 @@ export const REMOVE_SERVICE = gql`
             medication
             image
             services {
-                serviceId
+                _id
                 title
                 startDate
                 endDate
