@@ -11,10 +11,7 @@ const typeDefs = gql`
 
     input ServiceInput {
         title: String!
-        startDate: String!
-        endDate: String!
-        startTime: String
-        price: Float!
+        date: String!
     }
 
     type User {
@@ -32,12 +29,13 @@ const typeDefs = gql`
         gender: String!
         medication: String!
         image: String
+        services: [Service]
     }
 
     type Service {
-        _id: ID
+        _id: ID!
         title: String!
-        date: String
+        date: String!
     }
 
     type Auth {
@@ -48,6 +46,7 @@ const typeDefs = gql`
     type Query {
         me: User
         services: [Service]
+        pet: Pet
     }
 
     type Mutation {
