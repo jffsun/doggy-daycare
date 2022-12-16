@@ -4,23 +4,19 @@ const Pet = require('./Pet');
 const serviceSchema = new Schema({
   title: {
     type: String,
-    required: true,
     trim: true
   },
   startDate: {
-    type: Date,
-    required: true,
+    type: String,
   },
   endDate: {
-    type: Date,
-    required: true,
+    type: String,
   },
   startTime: {
     type: String,
   },
   price: {
     type: Number,
-    required: true,
   },
 },
 );
