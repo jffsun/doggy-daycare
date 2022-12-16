@@ -19,17 +19,6 @@ export const LOGIN_USER = gql`
             token
             user {
                 _id
-                firstName
-                lastname
-                email
-                pets {
-                    petId
-                    name
-                    age
-                    gender
-                    medication
-                    image
-                }
             }
         }
     }
