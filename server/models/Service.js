@@ -1,18 +1,11 @@
 const { Schema, model } = require('mongoose');
-const Pet = require('./Pet');
 
 const serviceSchema = new Schema({
   title: {
     type: String,
     trim: true
   },
-  startDate: {
-    type: String,
-  },
-  endDate: {
-    type: String,
-  },
-  startTime: {
+  date: {
     type: String,
   },
   price: {
