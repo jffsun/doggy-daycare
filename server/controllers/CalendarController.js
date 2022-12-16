@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const event = require('../models/Event');
+const service = require('../models/Service');
 const moment = require('moment');
 
 
 router.post("/create-event", async (req, res) => {
   
   // Event record will be defined in request body
-  const event= Event(req.body)
+  const service= Service(req.body)
 
   // Save event to database
-  await event.save();
+  await service.save();
 
   // Send success status
   res.sendStatus(200);
@@ -17,7 +17,7 @@ router.post("/create-event", async (req, res) => {
 
 router.post("/get-events", async (req, res) => {
   
-  const events = await Event.find({
+  const service = await Event.find({
 
     // Find events where start date is greater than or equal to 
     start: { $gte: moment(req.query.start).toDate() },
@@ -26,7 +26,7 @@ router.post("/get-events", async (req, res) => {
   })
 
   // Send request event to user as response
-  res.sendStatus(events);
+  res.sendStatus(service);
 });
 
 module.exports = router;
