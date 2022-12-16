@@ -6,6 +6,7 @@ import { useMutation } from '@apollo/client';
 import Auth from "../../utils/auth";
 
 
+
 export default function PetForm(){
 
     const [name, setName] = useState('')
@@ -77,6 +78,10 @@ export default function PetForm(){
         } catch (err) {
             console.log(err);
         }
+
+        window.location.replace('/pets')
+
+
     }
 
     return(

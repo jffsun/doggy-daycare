@@ -3,18 +3,12 @@ const { Schema, model } = require('mongoose');
 const serviceSchema = new Schema({
   title: {
     type: String,
-    trim: true
+    trim: true,
+    required: true
   },
   date: {
     type: String,
-    trim: true
   },
-},
-{
-  toJSON: {
-      getters: true,
-    },
-    id: false,
 },
 );
 

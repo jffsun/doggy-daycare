@@ -11,6 +11,8 @@ db.once('open', async () => {
     await Pet.deleteMany({});
     await Service.deleteMany({});
 
+    await Service.create(serviceSeeds);
+
   } catch (err) {
     console.error(err);
     process.exit(1);
