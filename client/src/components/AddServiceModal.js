@@ -104,7 +104,7 @@ export default function ({isOpen, onClose, onEventAdded}) {
         <div>
           <label>Date</label>
           {/* Set the state of date to the date the user selects */}
-          <Datetime dateClick={handleDate}/>     
+          <DateTime value={date} onChange={handleDate}/>     
         </div>
 
         <button>Schedule</button>
