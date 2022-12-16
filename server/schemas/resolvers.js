@@ -14,7 +14,7 @@ const resolvers = {
         },
         // query to find all services
         services: async () => {
-            return Service.findAll({});
+            return Service.find({});
         }
     },
     Mutation: {

@@ -1,14 +1,17 @@
 [
   {
-    "name": "Boarding",
+    "title": "Boarding",
+    "date": "2022-12-16",
     "price": 74
   },
   {
-    "name": "Bath",
+    "title": "Bath",
+    "date": "2022-12-17",
     "price": 34
   },
   {
-    "name": "Daycare",
+    "title": "Daycare",
+    "date": "2022-12-28",
     "price": 48
   }
 ]

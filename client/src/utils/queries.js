@@ -21,6 +21,7 @@ export const GET_ME = gql` {
 
 export const GET_SERVICES = gql`{
     services {
+        _id
         title
         date
         price 
