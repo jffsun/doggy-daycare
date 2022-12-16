@@ -12,17 +12,15 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
-  const handleInputChange = (e) => {
-    const { target } = e;
-    const inputType = target.id;
-    const inputValue = target.value;
-
-    if (inputType === "email") {
-      setEmail(inputValue);
-    } else if (inputType === "password") {
-      setPassword(inputValue);
-    }
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  }
+
+  console.log(email, password)
   
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -53,7 +51,7 @@ const Login = () => {
           id="email"
           type="email"
           placeholder="Email"
-          onChange={handleInputChange}
+          onChange={handleEmail}
         ></input>
         <p>
           {errorMessage && (
@@ -67,7 +65,7 @@ const Login = () => {
           id="password"
           placeholder="Password"
           type="password"
-          onChange={handleInputChange}
+          onChange={handlePassword}
         ></input>
         <p>
           {errorMessage && (
