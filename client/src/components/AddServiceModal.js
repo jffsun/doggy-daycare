@@ -54,13 +54,16 @@ export default function ({isOpen, onClose, onEventAdded}) {
           Select your pet:
         </Dropdown.Toggle>
 
-        <Dropdown.Menu>
-          {userData?.pets?.map}
-            <Dropdown.Item href="#/action-1">Raven</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">AXL</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Moon</Dropdown.Item>
+        {userData?.pets?.map((Pet) => {
+            return (
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Raven</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">AXL</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Moon</Dropdown.Item>
+            </Dropdown.Menu>
+            )
+          })}
 
-        </Dropdown.Menu>
       </Dropdown>
     );
   }
