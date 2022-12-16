@@ -25,7 +25,6 @@ export const GET_SERVICES = gql`{
         _id
         title
         date
-        price 
     }
 }
 `;

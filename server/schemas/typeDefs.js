@@ -38,7 +38,6 @@ const typeDefs = gql`
         _id: ID
         title: String!
         date: String
-        price: Float
     }
 
     type Auth {
