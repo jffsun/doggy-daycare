@@ -3,6 +3,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { ADD_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
   // set initial form state
@@ -49,6 +50,8 @@ export default function Signup() {
       email: '',
       password: '',
     });
+
+
   };
 
   return (
@@ -114,7 +117,7 @@ export default function Signup() {
           type='submit'
           variant='success'
           className="Submit btn btn-danger">
-          Submit
+            Submit
         </Button>
       </Form>
     </div>
