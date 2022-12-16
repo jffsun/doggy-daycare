@@ -15,10 +15,33 @@ export const GET_ME = gql` {
                 gender
                 medication
                 image
+                services {
+                    _id
+                    title
+                    date
+                }
             }
         }
 }
 `;
+
+export const GET_PET = gql` {
+    pet {
+        _id
+        name
+        age
+        gender
+        medication
+        image
+        services {
+            _id
+            title
+            date
+        }
+
+    }
+}
+`
 
 export const GET_SERVICES = gql`{
     services {

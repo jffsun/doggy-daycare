@@ -12,6 +12,12 @@ const resolvers = {
             // return user that matches id
             return User.findOne(params);
         },
+        // query to get a pet
+        pet: async (parent, { _id }) => {
+            const params = _id ? {_id} : {};
+
+            return Pet.findOne(params);
+        },
         // query to find all services
         services: async () => {
             return await Service.find();
@@ -69,13 +75,17 @@ const resolvers = {
             // returns the user with the updated pets
             return removedPet;
         },
-        addService: async (parent, {petId, input}) => {
-            // finds pet based on the petId then adds the input object to the services array
+        addService: async (parent, {_id, input}) => {
+            // finds pet based on the _id then adds the input object to the services array
             const addedService = await Pet.findOneAndUpdate(
-                { petId: petId },
+                {_id: _id},
                 { $push: { services: input }},
                 { new: true, runValidators: true},
             );
+
+            if (!addedService) {
+                console.log(`error!`);
+            }
 
             // returns pet with new service added to services array
             return addedService;
