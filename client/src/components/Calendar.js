@@ -6,9 +6,8 @@ import axios from 'axios';
 import moment from 'moment';
 
 // Render calendar component
-export default function Calendar() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [events, setEvents] = useState()
+export default function Calendar(services) {
+  const [services, setServices] = useState()
   const calendarRef = useRef(null)
    
   const onEventAdded = event => {
@@ -26,16 +25,16 @@ export default function Calendar() {
 
   async function handleDatesSet(data) {
     const response = await axios.get("/api/calendar/get-events?start="+moment(data.start).toISOString()+"&end="+moment(data.end).toISOString())
-    setEvents(response.data);
+    setServices(response.data);
   }
 
   return (
     <section>
-      <button onClick={() => setModalOpen(true)}>Add Event</button>
+      <button className='btn btn-danger' onClick={() => setModalOpen(true)}>Add Event</button>
       <div style={{position: "relative", zIndex: 0}}>
         <FullCalendar
           ref={calendarRef}
-          events={events}
+          events={services}
           plugins={[ dayGridPlugin ]}
           initialView="dayGridMonth"
           eventAdd={event => handleEventAdd(event)}
