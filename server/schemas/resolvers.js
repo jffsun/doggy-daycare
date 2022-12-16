@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Pet } = require('../models');
+const { User, Pet, Service } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -10,7 +10,7 @@ const resolvers = {
             const params = _id ? {_id} : {};
 
             // return user that matches id
-            return User.find(params);
+            return User.findOne(params);
         },
     },
     Mutation: {
@@ -58,7 +58,7 @@ const resolvers = {
             // finds user based on id then removes the pet based on id from the pets array
             const removedPet = await User.findOneAndUpdate(
                 {_id: _id},
-                { $pull: { pets: { petId: petId } }},
+                { $pull: { pets: { _id: petId } }},
                 { new: true, runValidators: true},
             );
 
@@ -80,7 +80,7 @@ const resolvers = {
             // finds pet based on id then removes service based on serviceId
             const removedService = await Pet.findOneAndUpdate(
                 { petId: petId },
-                { $pull: { services: { serviceId: serviceId } }},
+                { $pull: { services: { _id: serviceId } }},
                 { new: true, runValidators: true},
             );
 
