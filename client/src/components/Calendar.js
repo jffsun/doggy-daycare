@@ -31,7 +31,7 @@ export default function Calendar() {
 
   return (
     <section>
-      <button onClick={() => setModalOpen(true)}>Add Event</button>
+      <button className='btn btn-danger' onClick={() => setModalOpen(true)}>Add Event</button>
       <div style={{position: "relative", zIndex: 0}}>
         <FullCalendar
           ref={calendarRef}

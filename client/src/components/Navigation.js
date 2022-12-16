@@ -16,7 +16,7 @@ import Services from './pages/Services';
 export default function Navigation({ currentPage, handlePageChange}) {
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark"> 
     <span className="navbar-brand">PUP | DOGGY DAYCARE</span>
     <div className="nav-right">
     <ul className="navbar-nav mr-auto">
