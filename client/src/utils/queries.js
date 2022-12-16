@@ -9,6 +9,7 @@ export const GET_ME = gql` {
             lastName
             email
             pets {
+                _id
                 name
                 age
                 gender
