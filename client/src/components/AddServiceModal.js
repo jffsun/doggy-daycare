@@ -23,7 +23,7 @@ export default function ({isOpen, onClose, onEventAdded}) {
 
   // use state for the petId for the service
   const [petId, setPetId] = useState(null);
-  // handler to target the value of the petId selected in the service form
+  // function to select the value of the dropdown
   const handlePetId = (e) => {
     setPetId(e.target.value);
   };
@@ -32,7 +32,7 @@ export default function ({isOpen, onClose, onEventAdded}) {
   const [date, setDate] = useState(new Date());
   // handler to target the value of the date inputted in service form
   const handleDate = (e) => {
-    setDate(e.target.value);
+    setDate(e.dateStr);
   };
 
   // variable to use the GET_ME query
@@ -49,22 +49,15 @@ export default function ({isOpen, onClose, onEventAdded}) {
   // TO DO: Dropdown with react bootstrap 
   function petDropdown() {
     return (
-      <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Select your pet:
-        </Dropdown.Toggle>
-
+      <div>
+        <select onChange={handlePetId} value={petId}>
         {userData?.pets?.map((Pet) => {
-            return (
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Raven</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">AXL</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Moon</Dropdown.Item>
-            </Dropdown.Menu>
-            )
-          })}
-
-      </Dropdown>
+          return (
+            <option value={Pet?._id}>{Pet?.name}</option>
+          )
+        })}
+        </select>
+      </div>
     );
   }
 
@@ -75,8 +68,11 @@ export default function ({isOpen, onClose, onEventAdded}) {
     date: date 
   }
 
+  console.log(newService);
+
   const onSubmit = async (event) => {
     event.preventDefault();
+    
 
     // try/catch for using the ADD_SERVICE mutation
     try {
@@ -97,7 +93,7 @@ export default function ({isOpen, onClose, onEventAdded}) {
         {/* User selects which of their pets to be serviced from dropdown */}
         <div>
           <label>Pet</label>
-          {/* TO DO: {petDropdown()} */}
+          {petDropdown()}
         </div>
 
         <div>
@@ -108,7 +104,7 @@ export default function ({isOpen, onClose, onEventAdded}) {
         <div>
           <label>Date</label>
           {/* Set the state of date to the date the user selects */}
-          <Datetime value={date} onChange={handleDate} />     
+          <Datetime dateClick={handleDate}/>     
         </div>
 
         <button>Schedule</button>
