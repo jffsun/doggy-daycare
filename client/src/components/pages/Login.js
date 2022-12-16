@@ -4,6 +4,7 @@ import { useMutation } from "@apollo/client";
 // import { validateEmail, validateText } from '../utils/helpers'
 import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
+import App from "../../App";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -31,6 +32,9 @@ const Login = () => {
       });
 
       Auth.login(data.login.token);
+
+      App.setLoggedIn(true);
+
     } catch (err) {
       console.log(err);
     }

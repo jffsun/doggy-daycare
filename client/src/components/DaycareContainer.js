@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // Import components seen throughout application
-import Header from './Header'
 import Navigation from './Navigation';
 import Footer from './Footer';
 
 // Import our various pages
-import Home from './pages/Home';
-import Pets from './pages/Pets';
-import Bookings from './pages/Bookings';
-import Services from './pages/Services';
+
 import Cart from './pages/Cart';
-import Login from './pages/Login';
+
 
 // Handles all state changes which dictates which page the user is viewing
 export default function DaycareContainer() {

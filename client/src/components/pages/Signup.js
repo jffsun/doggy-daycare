@@ -21,7 +21,7 @@ export default function Signup() {
   };
 
   const handleFormSubmit = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;

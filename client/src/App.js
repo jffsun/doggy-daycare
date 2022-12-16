@@ -7,7 +7,7 @@ import { setContext } from '@apollo/client/link/context';
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import PetForm from "./components/forms/PetForm";
-import Pets from "./components/pages/Pets";
+
 // import { FormRoutes } from "./routes/PetRoutes";
 
 // Bind modal to your appElement
@@ -42,7 +42,7 @@ const authLink = setContext((_, { headers }) => {
 
 
 const App = () => {
-    const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
     
     return(
       <ApolloProvider client={client}>
