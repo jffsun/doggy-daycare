@@ -1,7 +1,7 @@
 const express = require('express');
 // bringing in the apollo server
 const {ApolloServer} = require('apollo-server-express');
-const path  = require('path');
+const path = require('path');
 
 const {typeDefs, resolvers} = require('./schemas');
 // bringing in the mongoose connection and setting it as a const db
@@ -22,8 +22,13 @@ app.use(express.urlencoded({extended: false}));
 // recognizes request objects as a json object
 app.use(express.json())
 
-// Use calendar routes
-app.use("/api/calendar", require("./Controllers/CalendarController"));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
 
 const startApolloServer = async(typeDefs, resolvers) => {
     await server.start();

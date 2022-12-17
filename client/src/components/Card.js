@@ -14,7 +14,7 @@ export default function Card(props) {
         <img
           className="card-img-top"
           src={props.image}
-          alt="Pet Picture"
+          alt=""
           height="150px"
         />
         <div className="card-body">

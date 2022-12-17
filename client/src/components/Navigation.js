@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 
 
 import Bookings from './pages/Bookings';

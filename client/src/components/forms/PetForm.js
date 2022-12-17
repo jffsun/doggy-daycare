@@ -29,18 +29,20 @@ export default function PetForm(){
         setGender(event.target.value)
     }
 
-    const [addPet, {error, data}] = useMutation(ADD_PET);
+    const [addPet, {error}] = useMutation(ADD_PET);
 
     // state for the fileinput
     const [fileInputState, setFileInputState] = useState('');
     // state for file converted to base64
     const [previewSource, setPreviewSource] = useState();
-    // state for the file to be uploaded to the database
-    const [selectedFile, setSelectedFile] = useState('');
 
     const fileInputChange = (e) => {
         // targets the chosen file
         const file = e.target.files[0];
+
+        if (!file) {
+            setFileInputState({});
+        }
         convertFile(file);
     };
 
@@ -74,13 +76,14 @@ export default function PetForm(){
                 variables: { _id, input: newPet }
             });
 
+            if (!data) {
+                console.log(error)
+            };
+
             console.log({data});
         } catch (err) {
             console.log(err);
         }
-
-        window.location.replace('/pets')
-
 
     }
 

@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../Card';
 import fakePets from '../../pets.json'
@@ -7,7 +7,6 @@ import { useQuery } from '@apollo/client';
 
 
 export default function Pets() {
-  const [modalOpen, setModalOpen] = useState(false);
 
   //import Pet Data
   const { loading, data } = useQuery(GET_ME);
@@ -15,6 +14,13 @@ export default function Pets() {
   console.log(data);
   const pets = data?.me.pets || [];
 
+  if (loading) {
+    return (
+      <div>
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
 
   return (
     <>

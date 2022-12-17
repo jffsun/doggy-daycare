@@ -9,7 +9,7 @@ import { useMutation } from '@apollo/client';
 // Datepicker react package
 import DateTime from 'react-datetime';
 
-export default function ({isOpen, onClose, onEventAdded}) {
+export default function AddServiceModal({isOpen, onClose}) {
 
   // use state for the title of the service
   const [title, setTitle] = useState("");
@@ -53,6 +53,20 @@ export default function ({isOpen, onClose, onEventAdded}) {
     );
   }
 
+  function serviceDropdown() {
+    return (
+      <div>
+        <select onChange={handleTitle} value={title}>
+          <option>Choose Service</option>
+          <option value="Daycare">Daycare</option>
+          <option value="Board">Board</option>
+          <option value="Groom">Groom</option>
+          <option value="Train">Train</option>
+        </select>
+      </div>
+    )
+  }
+
   // objects containing the service data to pass into the database
 
   const serviceInput = {
@@ -76,8 +90,8 @@ export default function ({isOpen, onClose, onEventAdded}) {
       });
 
       console.log(data);
-    } catch (err) {
-      console.log(err);
+    } catch {
+      console.log(error);
     }
 
     // Return if closed
@@ -100,7 +114,8 @@ export default function ({isOpen, onClose, onEventAdded}) {
 
         <div>
           {/* When the input is changed, the state of title is updated */}
-          <input placeholder="Service Title" value={title} onChange={handleTitle}/>
+          <label>Service</label>
+          {serviceDropdown()}
         </div>
 
         <div>

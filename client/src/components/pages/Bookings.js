@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef} from 'react';
 import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import { GET_SERVICES } from  '../../utils/queries'
@@ -9,6 +9,16 @@ export default function Bookings() {
 
   // get all scheduled services
   const { loading, data } = useQuery(GET_SERVICES);
+
+  if (loading) {
+    return (
+      <div>
+        <h1>
+          Loading...
+        </h1>
+      </div>
+    )
+  }
 
   try {
     console.log(data);

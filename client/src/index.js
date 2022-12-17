@@ -14,6 +14,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Import Style Sheet
 import styles from "./styles/style.css"
 
+console.log(`using ${styles}`);
+
 // ReactDOM.render() method to renders our app component to the DOM
 ReactDOM.render(<App />,
   // Rendering app component to the 'root' element which is the default ID created with render method
