@@ -53,7 +53,6 @@ const App = () => {
         <Router>
             <DaycareContainer loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             <Routes>
-              <Route path="/" element={<Home />}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/pets' element={<Pets/>}/>
                 <Route path="/pets/form" element={<PetForm/>}/>
