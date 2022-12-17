@@ -20,6 +20,7 @@ const typeDefs = gql`
         lastName: String!
         email: String!
         pets: [Pet]
+        services: [Service]
     }
 
     type Pet {
@@ -54,8 +55,8 @@ const typeDefs = gql`
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         addPet(_id: ID!, input: PetInput): User
         removePet(_id: ID!, petId: String!): User
-        addService(_id: ID!, input: ServiceInput): Pet
-        removeService(_id: ID!, serviceId: String!): Pet
+        addService(_id: ID!, input: ServiceInput): User
+        removeService(_id: ID!, serviceId: String!): User
     }
 `;
 

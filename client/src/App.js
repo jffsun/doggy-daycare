@@ -12,8 +12,6 @@ import Pets from "./components/pages/Pets";
 import Services from "./components/pages/Services";
 import Cart from "./components/pages/Cart";
 
-// import { FormRoutes } from "./routes/PetRoutes";
-
 // Bind modal to your appElement
 Modal.setAppElement('#root')
 
