@@ -11,6 +11,7 @@ import Home from "./components/pages/Home";
 import Pets from "./components/pages/Pets";
 import Services from "./components/pages/Services";
 import Cart from "./components/pages/Cart";
+import Bookings from "./components/pages/Bookings"
 
 // Bind modal to your appElement
 Modal.setAppElement('#root')
@@ -51,12 +52,15 @@ const App = () => {
         <Router>
             <DaycareContainer loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             <Routes>
+                <Route path='/' element={<Home/>}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/pets' element={<Pets/>}/>
                 <Route path="/pets/form" element={<PetForm/>}/>
                 <Route path="/services" element={<Services/>}/>
                 <Route path='/signup' element={<Signup/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/bookings" element={<Bookings/>}/>
+
             </Routes>
         </Router>
       </ApolloProvider>
