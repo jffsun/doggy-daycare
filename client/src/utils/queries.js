@@ -15,11 +15,11 @@ export const GET_ME = gql` {
                 gender
                 medication
                 image
-                services {
-                    _id
-                    title
-                    date
-                }
+            }
+            services {
+                _id
+                title
+                date
             }
         }
 }
@@ -33,12 +33,6 @@ export const GET_PET = gql` {
         gender
         medication
         image
-        services {
-            _id
-            title
-            date
-        }
-
     }
 }
 `

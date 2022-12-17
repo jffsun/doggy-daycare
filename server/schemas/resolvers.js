@@ -76,8 +76,8 @@ const resolvers = {
             return removedPet;
         },
         addService: async (parent, {_id, input}) => {
-            // finds pet based on the _id then adds the input object to the services array
-            const addedService = await Pet.findOneAndUpdate(
+            // finds user based on the _id then adds the input object to the services array
+            const addedService = await User.findOneAndUpdate(
                 {_id: _id},
                 { $push: { services: input }},
                 { new: true, runValidators: true},
