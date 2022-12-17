@@ -53,6 +53,20 @@ export default function AddServiceModal({isOpen, onClose}) {
     );
   }
 
+  function serviceDropdown() {
+    return (
+      <div>
+        <select onChange={handleTitle} value={title}>
+          <option>Choose Service</option>
+          <option value="Daycare">Daycare</option>
+          <option value="Board">Board</option>
+          <option value="Groom">Groom</option>
+          <option value="Train">Train</option>
+        </select>
+      </div>
+    )
+  }
+
   // objects containing the service data to pass into the database
 
   const serviceInput = {
@@ -100,7 +114,8 @@ export default function AddServiceModal({isOpen, onClose}) {
 
         <div>
           {/* When the input is changed, the state of title is updated */}
-          <input placeholder="Service Title" value={title} onChange={handleTitle}/>
+          <label>Service</label>
+          {serviceDropdown()}
         </div>
 
         <div>
