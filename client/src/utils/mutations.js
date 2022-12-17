@@ -66,11 +66,16 @@ export const ADD_SERVICE = gql`
     mutation addService($_id: ID!, $input: ServiceInput) {
         addService(_id: $_id, input: $input) {
             _id
-            name
-            age
-            gender
-            medication
-            image
+            firstName
+            lastName
+            email
+            pets {
+                _id
+                name
+                age
+                gender
+                medication
+            }
             services {
                 _id
                 title

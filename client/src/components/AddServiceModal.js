@@ -74,12 +74,13 @@ export default function AddServiceModal({isOpen, onClose}) {
     date: `${chosenDate._i}` 
   }
 
-  const _id = formPetId
+  const _id = userData._id
 
 
   const onSubmit = async (event) => {
     event.preventDefault();
 
+    console.log(userData);
     console.log(data);
     console.log(serviceInput, _id);
     

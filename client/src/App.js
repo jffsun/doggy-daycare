@@ -13,8 +13,6 @@ import Services from "./components/pages/Services";
 import Cart from "./components/pages/Cart";
 import Bookings from "./components/pages/Bookings"
 
-// import { FormRoutes } from "./routes/PetRoutes";
-
 // Bind modal to your appElement
 Modal.setAppElement('#root')
 
