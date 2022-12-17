@@ -7,6 +7,10 @@ import { setContext } from '@apollo/client/link/context';
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import PetForm from "./components/forms/PetForm";
+import Home from "./components/pages/Home";
+import Pets from "./components/pages/Pets";
+import Services from "./components/pages/Services";
+import Cart from "./components/pages/Cart";
 
 // Bind modal to your appElement
 Modal.setAppElement('#root')
@@ -48,8 +52,11 @@ const App = () => {
             <DaycareContainer loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             <Routes>
                 <Route path='/login' element={<Login/>}/>
+                <Route path='/pets' element={<Pets/>}/>
                 <Route path="/pets/form" element={<PetForm/>}/>
+                <Route path="/services" element={<Services/>}/>
                 <Route path='/signup' element={<Signup/>}/>
+                <Route path="/cart" element={<Cart/>}/>
             </Routes>
         </Router>
       </ApolloProvider>

@@ -10,7 +10,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const [errorMessage, setErrorMessage] = useState("");
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+
+  const [login, { error }] = useMutation(LOGIN_USER);
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -29,6 +30,11 @@ const Login = () => {
       const { data } = await login({
         variables: { email: email, password: password },
       });
+
+      if (!data) {
+        setErrorMessage(`lol error`);
+        console.log(error);
+      }
 
       Auth.login(data.login.token);
 

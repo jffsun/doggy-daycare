@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../../assets/pup.png';
 import { Link } from 'react-router-dom';
-import Auth from '../../utils/auth';
 
 export default function Home({ loggedIn, setLoggedIn }) {
 
