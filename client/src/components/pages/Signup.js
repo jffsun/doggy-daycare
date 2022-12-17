@@ -3,7 +3,6 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { ADD_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
-import { Link } from 'react-router-dom';
 
 export default function Signup() {
   // set initial form state
@@ -37,6 +36,10 @@ export default function Signup() {
       const { data } = await addUser({
         variables: { ...userFormData },
       });
+
+      if (!data) {
+        console.log(error);
+      }
 
       Auth.login(data.addUser.token);
     } catch (err) {

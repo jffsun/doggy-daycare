@@ -9,7 +9,7 @@ import { useMutation } from '@apollo/client';
 // Datepicker react package
 import DateTime from 'react-datetime';
 
-export default function ({isOpen, onClose, onEventAdded}) {
+export default function AddServiceModal({isOpen, onClose}) {
 
   // use state for the title of the service
   const [title, setTitle] = useState("");
@@ -76,8 +76,8 @@ export default function ({isOpen, onClose, onEventAdded}) {
       });
 
       console.log(data);
-    } catch (err) {
-      console.log(err);
+    } catch {
+      console.log(error);
     }
 
     // Return if closed
