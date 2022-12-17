@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: false}));
 // recognizes request objects as a json object
 app.use(express.json())
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
   });
 
