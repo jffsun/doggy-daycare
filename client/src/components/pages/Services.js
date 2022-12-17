@@ -57,7 +57,7 @@ export default function Services() {
           <div className="srvText">
           Book a variety of grooming services
           </div>
-          <button type="button" class="btn btn-danger srvBtn">Book Service</button>
+          <button type="button" className="btn btn-danger srvBtn">Book Service</button>
         </div>
 
         <div className="srvCard">
@@ -70,7 +70,7 @@ export default function Services() {
           <div className="srvText">
           Book a training class
           </div>
-          <button type="button" class="btn btn-danger srvBtn">Book Service</button>
+          <button type="button" className="btn btn-danger srvBtn">Book Service</button>
         </div>
 
         {/* <button onClick={() => setModalOpen(true)}>Add Event</button> */}
