@@ -1,7 +1,6 @@
 const express = require('express');
 // bringing in the apollo server
 const {ApolloServer} = require('apollo-server-express');
-const path  = require('path');
 
 const {typeDefs, resolvers} = require('./schemas');
 // bringing in the mongoose connection and setting it as a const db
