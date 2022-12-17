@@ -87,7 +87,7 @@ export default function AddServiceModal({isOpen, onClose}) {
     // try/catch for using the ADD_SERVICE mutation
     try {
       const { data } = await addService({
-        variables: { _id, serviceInput }
+        variables: { _id, input: serviceInput }
       });
 
       console.log(data);

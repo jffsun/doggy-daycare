@@ -8,7 +8,15 @@ const serviceSchema = new Schema({
   },
   date: {
     type: String,
-  },
+    trim: true,
+    required: true
+  }
+},
+{
+  toJSON: {
+      getters: true,
+    },
+    id: false,
 },
 );
 
