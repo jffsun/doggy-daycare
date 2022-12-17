@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
   });
 
 const startApolloServer = async(typeDefs, resolvers) => {
