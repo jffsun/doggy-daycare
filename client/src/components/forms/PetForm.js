@@ -85,9 +85,6 @@ export default function PetForm(){
             console.log(err);
         }
 
-        window.location.replace('/pets')
-
-
     }
 
     return(
