@@ -2,15 +2,15 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { Routes, Route} from 'react-router-dom'
+// import { Routes, Route} from 'react-router-dom'
 
 
-import Bookings from './pages/Bookings';
+// import Bookings from './pages/Bookings';
 
-import Cart from './pages/Cart';
-import Home from './pages/Home';
-import Pets from './pages/Pets';
-import Services from './pages/Services';
+// import Cart from './pages/Cart';
+// import Home from './pages/Home';
+// import Pets from './pages/Pets';
+// import Services from './pages/Services';
 
 // Destructure props 'currentPage' and 'handlePageChange' passed into Navigation() 
 export default function Navigation({ currentPage, handlePageChange}) {
@@ -74,14 +74,14 @@ export default function Navigation({ currentPage, handlePageChange}) {
   </ul>
   </div>
   </nav>
-    <Routes>
+    {/* <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/pets' element={<Pets/>} />
       <Route path='/bookings' element={<Bookings/>} />
       <Route path='/services' element={<Services/>} />
       <Route path='/cart' element={<Cart/>} />
 
-    </Routes>
+    </Routes> */}
 
   </>
 
