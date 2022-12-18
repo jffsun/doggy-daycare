@@ -30,6 +30,7 @@ export default function Home({ loggedIn, setLoggedIn }) {
       ) : (
       <button type="button" onClick={() => setLoggedIn(!loggedIn)} className="btn btn-danger loginBtn"><Link to='/login'>Log In</Link></button>
       )}
+
     </div>
 
     </>
