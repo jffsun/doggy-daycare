@@ -160,7 +160,7 @@ li a {
     padding-bottom: 10px;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 2vw;
+    font-size: 28px;
     border-right: 2px solid black;
 
 }
@@ -182,8 +182,6 @@ li a {
 
 
 }
-
-
 
 .card {
     margin-right: 60px;
@@ -289,9 +287,6 @@ li a {
         padding-bottom: 0px;
     }
 
-    .card {
-        margin-left: 50px;
-    }
 
     footer {
         height: 55px;
