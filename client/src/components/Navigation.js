@@ -39,16 +39,6 @@ export default function Navigation({ currentPage, handlePageChange}) {
         </li>
         <li className="nav-item">
           <Link
-            to='/bookings'
-            onClick={() => handlePageChange('Bookings')}
-            // Check to see if the currentPage is `Bookings`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
-            className={currentPage === 'Bookings' ? 'nav-link active' : 'nav-link'}
-          >
-            BOOKINGS
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
             to='/services'
             onClick={() => handlePageChange('Services')}
             // Check to see if the currentPage is `Services`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
@@ -57,6 +47,17 @@ export default function Navigation({ currentPage, handlePageChange}) {
             SERVICES
           </Link>
         </li>
+        <li className="nav-item">
+          <Link
+            to='/bookings'
+            onClick={() => handlePageChange('Bookings')}
+            // Check to see if the currentPage is `Bookings`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal navigation-link
+            className={currentPage === 'Bookings' ? 'nav-link active' : 'nav-link'}
+          >
+            BOOKINGS
+          </Link>
+        </li>
+
       </ul>
     </div>
   </nav>

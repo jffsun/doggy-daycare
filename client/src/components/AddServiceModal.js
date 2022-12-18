@@ -99,12 +99,20 @@ export default function AddServiceModal({isOpen, onClose}) {
     onClose();
   }
 
+  const customStyle = {
+    content: {
+      width: '50%',
+      marginLeft: '23%'
+    },
+  };
+
   if (loading) {
     return <h2>LOADING...</h2>
   }
+
   return (
     // Modal first renders as open and will close if user chooses
-    <Modal isOpen={isOpen} onRequestClose={onClose}>
+    <Modal isOpen={isOpen} onRequestClose={onClose} style={customStyle} >
       <form onSubmit={onSubmit}>
 
         {/* User selects which of their pets to be serviced from dropdown */}
@@ -112,20 +120,20 @@ export default function AddServiceModal({isOpen, onClose}) {
           <label>Pet</label>
           {petDropdown()}
         </div>
-
+      <br />
         <div>
           {/* When the input is changed, the state of title is updated */}
           <label>Service</label>
           {serviceDropdown()}
         </div>
-
+      <br />
         <div>
           <label>Date</label>
           {/* Set the state of date to the date the user selects */}
           <DateTime value={chosenDate} onChange={(date) => setDate(date)}/>     
         </div>
-
-        <button>Schedule</button>
+      <br />
+        <button className='btn btn-danger'>Schedule</button>
       </form>
     </Modal>
   )
