@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-// Import our various pages
-import Cart from './pages/Cart';
+
+
 
 
 // Handles all state changes which dictates which page the user is viewing
@@ -32,10 +32,7 @@ export default function DaycareContainer() {
     if (currentPage === 'Services') {
       return <Link to='/services'></Link>;
     }
-    if (currentPage === 'Cart') {
-      return <Link to='/cart'></Link>;
-    }
-    return <Cart />;
+
   };
 
   const handlePageChange = (page) => setCurrentPage(page);

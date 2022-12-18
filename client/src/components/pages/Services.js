@@ -15,6 +15,11 @@ export default function Services() {
       <br />
 
         <section>
+
+          {/* onClick: opens Modal */}
+          <button onClick={() => setModalOpen(true)} type="button" className="btn btn-danger ">Book Service</button>
+          <br />
+          <br />
           <div className="srvCard">
             <div className="srvIcon">
               <img src={bone} alt="bone"></img>
@@ -23,10 +28,11 @@ export default function Services() {
             DAYCARE
             </div>
             <div className="srvText">
-            Choose between Full Day and Half Day
+            Book Half Day or Full Day
             </div>
-            {/* onClick: opens Modal */}
-            <button onClick={() => setModalOpen(true)} type="button" className="btn btn-danger srvBtn">Book Service</button>
+            <div className="srvPrice">
+            $20 / $38
+          </div>
           </div>
 
           {/* Render 'AddServiceModal' component */}
@@ -44,7 +50,9 @@ export default function Services() {
           <div className="srvText">
           Book an overnight stay
           </div>
-          <button type="button" className="btn btn-danger srvBtn">Book Service</button>
+          <div className="srvPrice">
+            $50
+          </div>
         </div>
 
         <div className="srvCard">
@@ -55,9 +63,11 @@ export default function Services() {
           GROOM
           </div>
           <div className="srvText">
-          Book a variety of grooming services
+          Book grooming services
           </div>
-          <button type="button" className="btn btn-danger srvBtn">Book Service</button>
+          <div className="srvPrice">
+            $Varies
+          </div>
         </div>
 
         <div className="srvCard">
@@ -70,7 +80,9 @@ export default function Services() {
           <div className="srvText">
           Book a training class
           </div>
-          <button type="button" className="btn btn-danger srvBtn">Book Service</button>
+          <div className="srvPrice">
+            $40
+          </div>
         </div>
 
         {/* <button onClick={() => setModalOpen(true)}>Add Event</button> */}
