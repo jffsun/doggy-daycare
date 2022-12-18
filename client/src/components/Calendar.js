@@ -37,6 +37,7 @@ export default function Calendar(services) {
           events={services}
           plugins={[ dayGridPlugin ]}
           initialView="dayGridMonth"
+          className='calendar'
           eventAdd={event => handleEventAdd(event)}
           dateSet={(date) => handleDatesSet(date)}
           />

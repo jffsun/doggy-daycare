@@ -30,7 +30,7 @@ export default function Pets() {
       <br />
       <button type="button" className="btn btn-danger"><Link to='/pets/form'>Add Pet</Link></button>
       <br />
-      <div>
+      <div className="cardTest">
         {fakePets.map((fakepet) => 
         <Card name={fakepet.name} age={fakepet.age} gender={fakepet.gender} image={fakepet.image} medication={fakepet.medication} />
         )}
