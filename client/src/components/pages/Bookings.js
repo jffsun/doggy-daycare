@@ -26,7 +26,7 @@ export default function Bookings() {
     return (
       <div className="container">
         <h1>Bookings</h1>
-        <div style={{position: "relative", zIndex: 0}}>
+        <div className="calendar" style={{position: "relative", zIndex: 0}}>
           <FullCalendar
             ref={calendarRef}
             events={data.services}
