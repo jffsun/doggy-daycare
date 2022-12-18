@@ -30,7 +30,6 @@ const typeDefs = gql`
         gender: String!
         medication: String!
         image: String
-        services: [Service]
     }
 
     type Service {

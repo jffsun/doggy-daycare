@@ -14,7 +14,7 @@ export default function Bookings() {
     return (
       <div>
         <h1>
-          Loading...
+          Loading..
         </h1>
       </div>
     )
