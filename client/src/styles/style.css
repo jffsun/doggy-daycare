@@ -1,3 +1,4 @@
+/* Global */
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -5,22 +6,101 @@
     text-align: center;
 }
 
-.navbar {
+a {
+    color: white;
+}
+
+.a2 {
+    color: black;
+    font-weight: bold;
+}
+
+a:hover {
+    color: darkgray;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../assets/paw.png");
+    background-repeat: repeat;
+    background-size: 200px;
+    height: 90%;
+    overflow: auto;
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+    position:fixed;
     width: 100%;
+    height: 35px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
-.navbar-brand {
+footer p{
+    padding-top: 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 14px;
 
-    margin-top: 10px;
+}
+
+/* Assets */
+.input {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.fileUpload {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar {
+    overflow: auto;
+    height: 65vh;
+
+}
+
+.logo {
+    width: 250px;
+    margin-top: 50px;
     margin-bottom: 10px;
+}
 
 
+/* Containers */
+.container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+
+.container2 {
+    display: inline-block;
+    height: 80%;
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+}
+
+
+.navbar-brand {
+    margin-bottom: 10px;
 }
 
 .navbar-nav {
     float: right;
-
 }
 
 .nav-right {
@@ -36,35 +116,11 @@ ul {
 li a {
     color: white;
     margin-left: 20px;
-    float: right;
-    
-}
-
-a {
-    color: white;
-}
-
-a:hover {
-    color: darkgray;
-    text-decoration: none;
+    float: right; 
 }
 
 
-.logo {
-    width: 250px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-
-body {
-    background-image: url("../assets/paw.png");
-    background-repeat: repeat;
-    background-size: 200px;
-    height: 90%;
-    overflow: auto;
-
-}
-    
+/* Service */    
 .srvCard {
     width: 80%;
     height: 80px;
@@ -127,25 +183,7 @@ body {
 
 }
 
-footer {
-    bottom: 0;
-    text-align: center;
-    position:fixed;
-    width: 100%;
-    height: 35px;
-    display: flex;
-    flex-wrap: wrap;
 
-}
-
-footer p{
-    padding-top: 10px;
-    width: 100%;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-
-}
 
 .card {
     margin-right: 60px;
@@ -156,42 +194,7 @@ footer p{
 
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 70px;
-    overflow: hidden;
-}
 
-.container2 {
-    display: inline-block;
-    height: 80%;
-    margin-bottom: 70px;
-    overflow: hidden;
-}
-
-.a2 {
-    color: black;
-    font-weight: bold;
-}
-
-.input {
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-.fileUpload {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.calendar {
-    overflow: auto;
-    height: 65vh;
-
-}
 
 /* Tablet sizing */
 @media screen and (max-width: 768px){
@@ -226,8 +229,8 @@ footer p{
         display: flex;
     }
 
-    .footer {
-        padding-bottom: 50px;
+    footer {
+        padding-bottom: 36px;
 
     }
 
@@ -255,7 +258,8 @@ footer p{
     }
     .srvIcon img{
         height: 30px;
-        width: 30px;
+        width: 25px;
+        margin-right: 20px;
     }
     .srvTitle {
         width: 100%;
@@ -284,4 +288,13 @@ footer p{
         justify-content: center;
         padding-bottom: 0px;
     }
+
+    .card {
+        margin-left: 50px;
+    }
+
+    footer {
+        height: 55px;
+    }
+
 }
