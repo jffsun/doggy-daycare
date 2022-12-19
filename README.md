@@ -12,12 +12,17 @@
   </ol>
 </details>
 
+<div align="center">
+
 # Doggy Daycare
 
+</div>
 
+
+![Doggy Daycare Logo](./client/src/assets/pup.png "Doggy Daycare Logo") 
 ## Description
 
-![Doggy Daycare Logo](./images/logo.png "Doggy Daycare Logo") 
+
 
 A pet service scheduling application where users can schedule daycare, board, grooming, and training services for their pet.
 
@@ -25,14 +30,11 @@ A pet service scheduling application where users can schedule daycare, board, gr
 * Once they've added their pet, they may choose one of four pet services with the date of the service. After scheduling, all services will appear on the 'Bookings' page. 
 * This application uses the MERN stack. MongoDB acts as our database, Express is a Node.js framework that helps manage servers and routes, and React is a front-end library that creates the app's user interface.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 ## Link to App
 
 * [Doggy Daycare Deployed Heroku App](https://lit-everglades-07230.herokuapp.com/services)
 
-![](./client/src/assets/pup.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -117,29 +119,39 @@ A pet service scheduling application where users can schedule daycare, board, gr
 
 * THEN I see a calendar with the current bookings.
 
-Pets (INSERT IMG)
-![](./client/src/assets/pets.png)
-![](./client/src/assets/add-pet.png)
+## Adding a Pet
+![Pets Page](./client/src/assets/pets.png)
+![Add Pet](./client/src/assets/add-pet.png)
 
-Services (INSERT IMG)
-![](./client/src/assets/services.png)
-![](./client/src/assets/service-modal.png)
+## Scheduling a Service
+![Services](./client/src/assets/services.png)
+![Services Modal](./client/src/assets/service-modal.png)
 
-Bookings (INSERT IMG)
-![](./client/src/assets/bookings.png)
+## See Bookings
+![Bookings Calendar](./client/src/assets/bookings.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Future Development
 
-* Add a cart function and checkout page with payment API (i.e, Stripe)
+* Add cart and Stripe functionality to process payments
 
-* Image upload API instead of encoding images to Base64 string which severly detriments performance
+* Add to Pets section
 
-* Color code services in bookings calendar
+* Functionality to edit / remove pets
 
-* Implement authorized view for daycare employee user who can view request details and either accept or decline service requests
+* More fields to keep track of vaccination records, birthdays, etc.
 
+* Implement an API/cloud server that stores images to be used in the application (we currently convert images into base64 then pass the 
+string to MongoDB which isn’t very efficient)
+
+* Adding service - Intuitive date and time selector vs input fields(Datetime vs. fullCalendar time)
+
+* Central profile page for the user that allows them to add/edit any part of their profile (whether that be pets, services, etc)
+
+* Communication functionality (ie. ability to chat with other users if there are questions about services)
+
+* Reviews page for users that perform services to pets
 
 ## Collaborators
 [Alan Huang](https://github.com/ahuang23)

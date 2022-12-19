@@ -23,7 +23,7 @@ export default function AddServiceModal({isOpen, onClose}) {
   };
 
   // use state for the date for the service
-  const [chosenDate, setDate] = useState("MM/DD/YY HR:MIN");
+  const [chosenDate, setDate] = useState("MM/DD/YY HH:MM");
   const handleDate = (e) => {
     setDate(e.target.value);
   }
