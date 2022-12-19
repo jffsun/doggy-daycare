@@ -9,11 +9,6 @@ const typeDefs = gql`
         image: String
     }
 
-    input ServiceInput {
-        title: String!
-        date: String!
-    }
-
     type User {
         _id: ID!
         firstName: String!
@@ -54,7 +49,7 @@ const typeDefs = gql`
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         addPet(_id: ID!, input: PetInput): User
         removePet(_id: ID!, petId: String!): User
-        addService(_id: ID!, input: ServiceInput): User
+        addService(title: String!, date: String!): Service
         removeService(_id: ID!, serviceId: String!): User
     }
 `;

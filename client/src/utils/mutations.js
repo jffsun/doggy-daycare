@@ -63,24 +63,11 @@ export const REMOVE_PET = gql`
 `;
 
 export const ADD_SERVICE = gql`
-    mutation addService($_id: ID!, $input: ServiceInput) {
-        addService(_id: $_id, input: $input) {
+    mutation addService($title: String!, $date: String!) {
+        addService(title: $title, date: $date) {
             _id
-            firstName
-            lastName
-            email
-            pets {
-                _id
-                name
-                age
-                gender
-                medication
-            }
-            services {
-                _id
-                title
-                date
-            }
+            title
+            date
         }
     }
 `

@@ -75,13 +75,9 @@ const resolvers = {
             // returns the user with the updated pets
             return removedPet;
         },
-        addService: async (parent, {_id, input}) => {
-            // finds user based on the _id then adds the input object to the services array
-            const addedService = await User.findOneAndUpdate(
-                {_id: _id},
-                { $push: { services: input }},
-                { new: true, runValidators: true},
-            );
+        addService: async (parent, { title, date}) => {
+            // takes input and adds it to the service model
+            const addedService = await Service.create({ title, date});
 
             if (!addedService) {
                 console.log(`error!`);

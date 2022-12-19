@@ -6,9 +6,6 @@ import { useQuery } from '@apollo/client';
 import { ADD_SERVICE } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 
-// Datepicker react package
-import DateTime from 'react-datetime';
-
 export default function AddServiceModal({isOpen, onClose}) {
 
   // use state for the title of the service
@@ -26,7 +23,10 @@ export default function AddServiceModal({isOpen, onClose}) {
   };
 
   // use state for the date for the service
-  const [chosenDate, setDate] = useState(new Date());
+  const [chosenDate, setDate] = useState("MM/DD/YY HR:MIN");
+  const handleDate = (e) => {
+    setDate(e.target.value);
+  }
 
   // variable to use the GET_ME query
   const { loading, data } = useQuery(GET_ME);
@@ -67,27 +67,24 @@ export default function AddServiceModal({isOpen, onClose}) {
     )
   }
 
-  // objects containing the service data to pass into the database
-
-  const serviceInput = {
-    title: title,
-    date: `${chosenDate._i}` 
-  }
-
-  const _id = userData._id
-
+  // parsing the chosen date into something fullcalendar can render on bookings page
+  const fullDate = chosenDate.split("/")
+  const time = chosenDate.split(" ")
+  const year = chosenDate.split("")
+  
+  const parsedDate = `20${year[6]}${year[7]}-${fullDate[0]}-${fullDate[1]}T${time[1]}:00`
 
   const onSubmit = async (event) => {
     event.preventDefault();
 
     console.log(userData);
     console.log(data);
-    console.log(serviceInput, _id);
+    console.log(title, parsedDate)
     
     // try/catch for using the ADD_SERVICE mutation
     try {
       const { data } = await addService({
-        variables: { _id, input: serviceInput }
+        variables: { title: title, date: parsedDate }
       });
 
       console.log(data);
@@ -130,7 +127,7 @@ export default function AddServiceModal({isOpen, onClose}) {
         <div>
           <label>Date</label>
           {/* Set the state of date to the date the user selects */}
-          <DateTime value={chosenDate} onChange={(date) => setDate(date)}/>     
+          <input value={chosenDate} onChange={handleDate} placeholder="MM/DD/YY HR:MIN"></input>   
         </div>
       <br />
         <button className='btn btn-danger'>Schedule</button>
