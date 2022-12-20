@@ -10,6 +10,8 @@ export default function Bookings() {
   // get all scheduled services
   const { loading, data } = useQuery(GET_SERVICES);
   
+  
+
   if (loading) {
     return (
       <div>
