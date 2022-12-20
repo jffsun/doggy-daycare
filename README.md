@@ -33,7 +33,7 @@ A pet service scheduling application where users can schedule daycare, board, gr
 
 ## Link to App
 
-* [Doggy Daycare Deployed Heroku App](https://lit-everglades-07230.herokuapp.com/services)
+* [Doggy Daycare Deployed Heroku App](https://lit-everglades-07230.herokuapp.com/)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -161,5 +161,10 @@ string to MongoDB which isn’t very efficient)
 [Jeffrey Sun](https://github.com/jffsun)
 
 [Markus Mercado](https://github.com/markkoos)
+
+## Presentation
+
+You can view the Google Slides presentation for our application below:
+* [Google Slides](https://docs.google.com/presentation/d/10zNjL1TkRq0khWF7hR4A9t8Ch_vfp-Jl8D8cHg7860g/edit?usp=sharing)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
