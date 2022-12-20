@@ -31,7 +31,7 @@ export default function PetForm(){
     const [addPet, {error}] = useMutation(ADD_PET);
 
     // state for the fileinput
-    const [fileInputState, setFileInputState] = useState('');
+    
     // state for file converted to base64
     const [previewSource, setPreviewSource] = useState();
 
@@ -39,9 +39,6 @@ export default function PetForm(){
         // targets the chosen file
         const file = e.target.files[0];
 
-        if (!file) {
-            setFileInputState({});
-        }
         convertFile(file);
     };
 
@@ -93,11 +90,9 @@ export default function PetForm(){
             <form>
                 <div className="fileUpload">
                 <label>
-                    Add Photo
                     <input type="file" 
                     name="image" 
                     onChange={fileInputChange}
-                    value={fileInputState} 
                     className="form-input"/>
                 </label>
                 </div>
