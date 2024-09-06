@@ -12,13 +12,7 @@
   </ol>
 </details>
 
-<div align="center">
-  # Doggy Daycare
-  <br>
-</div>
-
-
-
+# Doggy Daycare
 
 ## Description
 
