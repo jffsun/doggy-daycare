@@ -18,8 +18,6 @@
 
 </div>
 
-
-![Doggy Daycare Logo](./client/src/assets/pup.png "Doggy Daycare Logo") 
 ## Description
 
 
