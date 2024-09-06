@@ -13,10 +13,11 @@
 </details>
 
 <div align="center">
-
+  
+</div>
 # Doggy Daycare
 
-</div>
+
 
 ## Description
 
